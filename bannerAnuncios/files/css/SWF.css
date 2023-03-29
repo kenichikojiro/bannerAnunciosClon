@@ -1,0 +1,908 @@
+@CHARSET "ISO-8859-1";
+
+/*Incluir estilos de VWM */
+@import url('vw-Styles.css');
+@import url('vw-icons.css');
+
+
+/*Para todos los elementos*/
+* { font-family: Verdana,CelliniTF-Bold,VW Headline Black,Arial,sans-serif; font-size: 9pt; }
+
+/*Para el tag HTML*/
+html { height: calc(100% - 0px); }
+
+
+/*Para el tag BODY*/
+/*Para los elementos HR o separadores de temas desplegado muchas veces como regla horizontal*/
+hr { border-width:1px; border-style:solid; border-color:#11808A; }
+
+/*Para el tag FIELDSET*/
+fieldset { border-width:1px; border-style:solid; padding:10px; border-color:#11808A; margin: 0; }
+
+/*Para las listas de elementos*/
+ul.layout { list-style: none; }
+
+/*Para las ligas o vinculos*/
+a { color:#004666; outline: none; text-decoration: none; }
+a:hover { color:#004666; text-decoration: underline; }
+a:visited{ color:#004666; }
+a.show, a.hide { font-size: 10pt; color: #004666; display: block; }
+
+/*Para todos los parrafos*/
+p { margin: 0; padding: 0 0 10px; }
+
+/*Para todos los textarea, input del tipo text o password y listas de seleccion*/
+textarea[disabled], input[type="text"][disabled], input[type="password"][disabled], select[disabled] {
+    -webkit-text-fill-color: #000;
+    background: #e6e6e6;
+}
+
+.pageHeader  { height: 85px; width: calc(100% - 10px); }
+.pageFooter  { height: 55px; width: calc(100% - 10px); margin-left: 5px; }
+.pageMenunorth  { height: 40px; width: calc(100% - 10px); }
+.pageMenusouth  { height: 40px; width: calc(100% - 10px); }
+.pageMenueast { min-width: 150px; max-width: 400px; !important;}
+.pageMenuwest { min-width: 150px; max-width: 400px; !important;}
+.pageContent { width: 300px; overflow: auto; }
+
+/*Marca de agua de la pagina Home*/
+.LogoWaterMark { opacity: 0.15; filter:alpha(opacity=75); }
+.ui-layout-unit .ui-layout-unit-content { background:transparent; }
+
+/*Encabezados del sistema*/
+.HeaderLabel, .TitleLabel, .Title2Label, .FooterLabel, .FooterLabelSmall, .versionLabel, .swfLabel { font-weight: bold; color:#215ACC; }
+.HeaderLabel { font-size:1.5em; padding:5px 5px; text-align:left; }
+.TitleLabel  { font-size:1.2em; padding:5px 5px; text-align:left; }
+.Title2Label { font-size:1.0em; padding:5px 5px; text-align:left; }
+.FooterLabel { font-size:0.85em; }
+.FooterLabelSmall { font-size:0.75em; }
+.versionLabel { font-size: 1.5em; }
+.swfLabel { font-size: 1.25em; }
+
+/*Etiquetas y separadores de Camino de Migas*/
+.ui-outputlabel.ui-widget.BreadCrumbLabel,
+.ui-outputlabel.ui-widget.BreadCrumbSeparator {
+	font-size: 10pt; font-weight: bold; color:#8994A0; text-align: left; font-style: italic; margin-left: 3px; margin-right: 3px;
+}
+
+/*Etiquetas para campos de captura*/
+.FieldLabel, .FieldLabelLeft, .FieldLabelBig, .FieldLabelCenter, .FieldLabelBigCenter, .FieldLabelRight, .FieldLabelBigRight, 
+.FieldLabelVeryBig, .FieldLabelVeryBigLeft, .FieldLabelVeryBigRight, .FieldLabelVeryBigCenter, .FieldLabelReq,
+.FieldLabelSmall, .FieldLabelSmallLeft, .FieldLabelSmallCenter, .FieldLabelSmallRight,
+.FieldLabelMedium, .FieldLabelMediumLeft, .FieldLabelMediumCenter, .FieldLabelMediumRight, .FieldLabelMediumReq { font-weight: bold; color:#004666; }
+.FieldLabelMenu { font-weight: bold; color: #215ACC; padding-left: 10px; }
+.FieldLabelMenuPositive { font-weight: bold; color: #FFFFFF; padding-left: 10px; }
+
+.FieldLabelVeryBig, .FieldLabelVeryBigLeft, .FieldLabelVeryBigRight, .FieldLabelVeryBigCenter, .ui-outputlabel.ui-widget.FieldLabelVeryBig { font-size:12pt; }
+.FieldLabelBig, .FieldLabelBigLeft, .FieldLabelBigRight, .FieldLabelBigCenter, .ui-outputlabel.ui-widget.FieldLabelBig { font-size:11pt; }
+.FieldLabelMedium, .FieldLabelMediumLeft, .FieldLabelMediumCenter, .FieldLabelMediumRight, .FieldLabelMediumReq, .ui-outputlabel.ui-widget.FieldLabelMedium { font-size: 10pt; }
+.FieldLabel, .FieldLabelLeft, .FieldLabelCenter, .FieldLabelRight, .FieldLabelReq { font-size: 9pt; }
+
+.FieldLabelSmall, .FieldLabelSmallCenter, .FieldLabelSmallRight { font-size: 8pt; }
+.FieldLabelSmallVw { font-size: 3pt; }
+.FieldLabelBigVw { font-size: 25pt;}
+
+.ui-outputlabel.ui-widget.FieldLabelMedium, .ui-outputlabel.ui-widget.FieldLabelBig { padding-right: 5px; }
+
+/*Campos de captura*/
+.FieldData, .FieldDataRight, .FieldDataCenter { font-size: 9pt; font-weight:normal; color:#004666; }
+.FieldDataBig, .FieldDataBigRight, .FieldDataBigCenter { font-size:11pt; font-weight:normal; color:#004666; }
+.ui-inputfield.ui-inputtext.ui-widget.ui-state-default.ui-corner-all.FieldDataBig.ui-state-filled {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.FieldLabelReq { color:#006384; display: inline-block; position: relative; margin-left: .4em; }
+.FieldLabelReq:before { content:"* "; display: block; position: absolute; left: -.8em; top: -.1em; }
+
+/*Alineacion a la izquierda*/
+.gridAlignLeft, .CellLeft, .FieldLabelLeft, .FieldLabelBigLeft, .FieldData, .FieldDataBig, .ButtonPanelLeft, 
+.FieldLabelSmallLeft { text-align:left; }
+
+/*Alineacion al centro*/
+.gridAlignCenter, .CellCenter, .FieldLabelCenter, .FieldLabelBigCenter,.FieldLabelSmallCenter, .FieldDataCenter, 
+.FieldDataBigCenter, .ButtonPanel, .DataPanel, .DataTable { text-align:center; }
+
+/*Alineacion a la derecha*/
+.gridAlignRight, .CellRight, .FieldLabel, .FieldLabelRight, .FieldLabelBig, .FieldLabelBigRight, .FieldLabelSmall, 
+.FieldLabelSmallRight, .FieldDataRight, .FieldDataBigRight, .ButtonPanelRight, .FieldLabelReq { text-align:right; }
+
+/*Elementos de panel de botones*/
+.ButtonPanel, .ButtonPanelLeft, .ButtonPanelCenter, .ButtonPanelRight { border: 0px; }
+
+/*Elementos de tablas*/
+th { font-size: 10pt; font-weight: bold; color: #004666; text-align: left; }
+td { font-size: 9pt; font-weight: normal; color: #004666; }
+tr.tableRow0 td { background-color: #FFFFFF; color: #004666; }
+tr.tableRow1 td { background-color: #CCDDEE; color: #004666; }
+.tableRowSelected { background-color: #aeb0f0; color: #004666; !important;}
+
+/*Ancho de celdas*/
+.grid1{ width: 1% }
+.grid5{ width: 5% }
+.grid10 { width: 10%; }
+.grid15 { width: 15%; }
+.grid20 { width: 20%; }
+.grid25 { width: 25%; }
+.grid30 { width: 30%; }
+.grid35 { width: 35%; }
+.grid40 { width: 40%; }
+.grid45 { width: 45%; }
+.grid50 { width: 50%; }
+.grid55 { width: 55%; }
+.grid60 { width: 60%; }
+.grid65 { width: 65%; }
+.grid70 { width: 70%; }
+.grid75 { width: 75%; }
+.grid80 { width: 80%; }
+.grid85 { width: 85%; }
+.grid90 { width: 90%; }
+.grid95 { width: 95%; }
+.grid100, .DataTable { width: 100%; }
+
+/*Alineacion vertical de celdas*/
+.gridAlignTop, .DataTable { vertical-align: top; }
+.gridAlignMiddle { vertical-align: middle; }
+.gridAlignBottom, .PanelGridColumns { vertical-align: bottom; }
+
+
+/*Para elementos tipo consola de mensajes que quiera ampliarse el tama�o de letra*/
+.zoomedLog { font-size: 11pt; }
+
+/*Para paneles inactivos se aplica un estilo gradual de blanco a gris*/
+.panelDis { background-image: linear-gradient(to bottom, #FFFFFF 5%, #CCCCCC 100%); }
+
+/*Para elementos del menu de prime faces*/
+.menu-bar { width: calc(100% - 30px); }
+.ui-menuitem-text{ width: auto; color:#004666; }
+.ui-menu.ui-widget li > .ui-menuitem-link.ui-state-hover .ui-menuitem-text { color: #ffffff; }
+.ui-megamenu-vertical ul.ui-menu-list.ui-helper-reset li.ui-menuitem.ui-widget.ui-corner-all { width: 100%; }
+.ui-menuitem { width: 230px; }
+.ui-menu.ui-megamenu .ui-menu-child .ui-menu-list { width: 230px;}
+.ui-menu .ui-menu-parent .ui-menu-child { font-size:11px; width:275px; display:none; padding:0.2em; position:absolute; margin:0; outline:0; line-height:1.2; text-decoration:none; list-style:none; }
+.ui-menuitem-text { font-size: 11px; }
+.ui-menu-list { font-size: 11px; }
+.ui-menubar .ui-widget-header { font-size: 11px; }
+.ui-menu .ui-menuitem { margin: 2px 0 !important }
+.ui-menu.ui-widget a { white-space: inherit !important; }
+    
+/*Para elementos de tipo radio button de prime faces*/
+.ui-radiobutton .ui-radiobutton-box { width: 11px; height: 11px; line-height: 11px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.ui-radiobutton { margin: 1px 0; width: 11px; line-height: 11px; display: inline-block; margin-top: -4px; }
+.ui-radiobutton-icon { margin-left: -2px; margin-top: -3px; }
+.ui-radiobutton.ui-radiobutton-native { margin: 0; padding: 0; }
+.ui-radiobutton.ui-radiobutton-native .ui-helper-hidden-accessible { clip: auto; position: static !important; }
+.ui-radiobutton.ui-radiobutton-native .ui-radiobutton-box { display:none; }
+
+/*Para elementos del tipo selectManyCheckbox */
+body .booleanCheckbox.ui-chkbox { width: auto; padding-right: 10px; !important; }
+body .booleanCheckbox .ui-chkbox-box { display: inline-block; vertical-align: middle; margin-right: 10px; !important; }
+body .booleanCheckbox .ui-chkbox-label { vertical-align: middle; margin-top: 0; margin-right: 10px; !important; }
+
+/*Para elementos de objeto tipo tree node*/
+.ui-tree, .ui-treenode-label { font-size: 11pt; font-weight:normal; color:#004666; }
+.ui-tree .ui-treenode-label { padding: 0 3px !important; }
+.ui-tree .ui-treenode-children { margin: 1 !important; padding: 0 0 0 25px !important; }
+
+.ui-dialog-titlebar, .ui-panel-titlebar, .ui-dialog.ui-widget-content .ui-dialog-titlebar { background-color:#004666; border-color:#004666; padding:2px; border-width:1px; border-style:solid; color:#004666; }
+.ui-dialog-title, .ui-panel-title, .ui-dialog-title { background: transparent; border: 0px; font-size:1.75em; color:#FFFFFF; font-weight:normal; }
+.ui-dialog-title-small, .ui-panel-title-small, .ui-dialog-title-small { background: transparent; border: 0px; font-size:0.85em; color:#FFFFFF; font-weight:normal; }
+*.gridNoBorder{ border-collapse:collapse; padding: 0px; margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; border:0px; border-radius:4px; }
+
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error { background-color: rgba(255,0,0,0.1); }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .55; filter:Alpha(Opacity=55); background-image: none; }
+
+.ui-corner-all { border-radius: 4px; }
+.ui-selectonemenu .ui-selectonemenu-trigger { border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+
+.gridNoBorder tr, .gridNoBorder td {
+    border: none;
+}
+
+.ui-datagrid-no-border>.ui-datagrid-content {
+   border: none;
+}
+
+.ButtonPanel.panelGridNoBorder,
+.panelGridNoBorder.ui-panelgrid>*>tr,
+.panelGridNoBorder.ui-panelgrid .ui-panelgrid-cell {
+   border: none;
+   background-color: transparent; 
+   padding: 0px;
+   !important;
+}
+ .ui-panelgrid.ui-widget.panelGridNoBorder tbody tr.ui-widget-content td.ui-panelgrid-cell.FieldData{
+   padding: 4px;
+}
+
+.transparentBackground,
+.transparentBackground tr,
+.transparentBackground td { background-color: transparent; !important; }
+/*Estilos para filas seleccionadas de una tabla*/
+table tr .ui-state-highlight, table tr .ui-widget-content .ui-state-highlight, table tr .ui-widget-header .ui-state-highlight {
+    border: inherit;
+    background: lightblue !important;
+    text-shadow: none;
+}
+
+.gridCellResaltado { background-color:#ffaeae; }
+
+/* Estilos de mensajes de error growl */
+.ui-growl { width: 400px; }
+.ui-growl-title { font-size:13px; text-align: center; }
+.ui-growl-message { width: 80%; }
+.ui-growl-message p { font-size:13px; }
+
+/* Estilos para todos los calendarios */
+.fc-week-number.ui-widget-content {background-color: rgb(230,230,230); !important;}
+.fc-day-number {color: rgb(0,0,0); font-weight: bold; !important;}
+.fc-day-number.fc-sat {color: rgb(255,255,255); font-weight: bold; !important;}
+.fc-day-number.fc-sun {color: rgb(255,255,255); font-weight: bold; !important;}
+.legend {border-width:1px; border-style:solid;}
+.fc-title {color:#000000; font-weight: normal; font-size: 1.2em; !important;}
+.fc-day.ui-widget-content.fc-sat.fc-past {background-color: rgb(0,128,0); !important;}
+.fc-day.ui-widget-content.fc-sat.fc-future {background-color: rgb(0,128,0); !important;}
+.fc-day.ui-widget-content.fc-sun.fc-past {background-color: rgb(0,128,0); !important;}
+.fc-day.ui-widget-content.fc-sun.fc-future {background-color: rgb(0,128,0); !important;}
+
+.catalogo-align-alfanumeric, .column-align-left { text-align: left; }
+.catalogo-align-numeric, .column-align-right { text-align: right; }
+.catalogo-align-code, .column-align-center { text-align: center; }
+.catalogo-align-date{ text-align: center; }
+.catalogo-align-status{ text-align: center; }
+
+.item-commandLink{ display: inline-block; }
+.item-commandLink a{ display: flex; justify-content: center; flex-direction: column;}
+.item-commandLink a label { color: initial; margin-left: initial; }
+
+.dataTableFilterResponsive thead tr th input.ui-column-filter {
+	min-width: initial !important;
+    max-width: 95%;
+    width: 95%;
+}
+
+.dataTableFilterResponsive thead tr th .ui-column-customfilter .ui-selectonemenu {
+	min-width: initial !important;
+    max-width: 95%;
+    width: 80%;
+}
+
+.ui-sortable-column-icon {
+	float: left;
+	position: relative; 
+	!important
+}
+
+.ui-datatable .ui-sortable-column-icon.ui-icon {
+    background-image: none; text-indent: 0; margin: 0 0 0 .5em;
+}
+.ui-paginator > span:before, 
+.ui-sortable-column-icon:before,
+.ui-paginator-first, .ui-paginator-prev, .ui-paginator-next, .ui-paginator-last {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+  font-weight: 900;
+  color: #2274AC; 
+  font-size: 1em;
+}
+.ui-paginator .ui-paginator-first .ui-icon, 
+.ui-paginator .ui-paginator-prev .ui-icon, 
+.ui-paginator .ui-paginator-next .ui-icon, 
+.ui-paginator .ui-paginator-last .ui-icon { display: none; }
+
+.ui-paginator.ui-paginator-top.ui-widget-header span.ui-paginator-current,
+span.ui-paginator-pages a.ui-paginator-page{
+	font-size: 1.1em;
+}
+
+.ui-paginator > span > span, .ui-paginator a span { display: inline-block; }
+.ui-paginator-first:before { content: '\f100'; color: #2274AC; font-weight: 900; font-size: 1.2em; } 
+.ui-paginator-prev:before  { content: '\f104'; color: #2274AC; font-weight: 900; font-size: 1.2em; }
+.ui-paginator-next:before  { content: '\f105'; color: #2274AC; font-weight: 900; font-size: 1.2em; }
+.ui-paginator-last:before  { content: '\f101'; color: #2274AC; font-weight: 900; font-size: 1.2em; }
+.ui-icon-carat-2-n-s:before { content: '\f0dc'; font-size: 1.2em; }
+.ui-icon-carat-2-n-s.ui-icon-triangle-1-n:before { content: '\f0de'; font-size: 1.2em; }
+.ui-icon-carat-2-n-s.ui-icon-triangle-1-s:before { content: '\f0dd'; font-size: 1.2em; }
+.ui-paginator .ui-state-disabled { opacity: .25; }
+
+.icon-label { color:#004666; !important; }
+.icon-label.disabled { color:#CFD7D9; !important; }
+.icon-labelHeader { color:#004666; !important; }
+.icon-labelHeader.disabled { color:#CFD7D9; !important; }
+
+.ui-columntoggler { overflow-x: hidden; }
+.ui-columntoggler .ui-columntoggler-items { margin-right: 12px; }
+
+.tinySize-field { width: 40pt; }
+.tinySize-field input { width: 40pt; }
+.tinySize-selectField { width: 30pt; min-width: 30pt !important;}
+.ui-selectcheckboxmenu.tinySize-selectField { width: 46pt !important; min-width: 46pt !important; }
+.smallSize-field { width: 75pt; }
+.smallSize-field input { width: 75pt; }
+.smallSize-selectField { width: 65pt; min-width: 65pt !important;}
+.ui-selectcheckboxmenu.smallSize-selectField { width: 156pt !important; min-width: 156pt !important; }
+.normalSize-field { width: 150pt; }
+.normalSize-field input { width: 150pt; }
+.normalSize-selectField { width: 140pt; min-width: 140pt !important; }
+.ui-selectcheckboxmenu.normalSize-selectField { width: 156pt !important; min-width: 156pt !important; }
+.largeSize-field { width: 210pt; }
+.largeSize-field input { width: 210pt; }
+.largeSize-selectField { width: 200pt; min-width: 200pt !important; }
+.ui-selectcheckboxmenu.largeSize-selectField { width: 216pt !important; min-width: 216pt !important; }
+
+.panelNoBorder { border: 0px !important; }
+
+.catalogoProductoVistaDetalleDialog{ max-height: 500px; min-width: 760px; overflow: auto; }
+
+.catalogoFechaPanelNoBorder,
+.catalogoFechaPanelNoBorder .ui-panel-content{
+	border: none;
+	padding: 0px;
+}
+.wizardCatalogoProducto ul.ui-wizard-step-titles li.ui-wizard-step-title{
+	border-radius: 10px 20px 0px 0px;
+	font-size: 1.5em;
+}
+
+.panelProductoWizardAddConceptoCuota{
+	margin-left: auto;
+}
+
+.commandLinkProductoWizardAddConceptoCuota .vw-icon{
+	font-size: 0.7em;
+}
+
+.viewPanelTabs ul.ui-tabs-nav li.ui-tabs-header{
+	border-radius: 10px 20px 0px 0px;
+}
+
+.viewPanelTabs ul.ui-tabs-nav li.ui-tabs-header a{
+	font-size: 1.5em;
+}
+
+.dataTableRowColor {
+	background-color: #fca752 !important;
+	background-image: none !important;
+	color: #000000 !important;
+}
+
+.dataTableRowColorGray {
+	background-color: #e6e6e6 !important;
+	background-image: none !important;
+	color: #000000 !important;
+}
+
+.dataTableRowColorGreen {
+	background-color: #b4ffb4 !important;
+	background-image: none !important;
+	color: #000000 !important;
+}
+
+tr.dataTableRowColorRed td {
+	background-color: #ff6969 !important;
+	background-image: none !important;
+	color: #FFFFFF !important;
+}
+
+.dataTableRowColorYellow {
+	background-color: #ffffb4 !important;
+	background-image: none !important;
+	color: #000000 !important;
+}
+
+.dataTableRowColorLightBlue {
+	background-color: #b4daff !important;
+	background-image: none !important;
+	color: #000000 !important;
+}
+
+.catalogoConceptoCuotaConfigCenter{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ui-selectonemenu.ui-state-disabled label.ui-selectonemenu-label { 
+	-webkit-text-fill-color: #000;
+    background: #e6e6e6; 
+}
+
+.fileNameColumn{
+	display: none;
+}
+
+#fileNamesPreview .ui-datascroller .ui-datascroller-content{
+ border: 0px !important;
+}
+
+
+.rowBW10 {
+	text-align: left;
+	background: #ecedee!important;}
+.rowBW11 {
+	text-align: left;
+	background: #c3c5c9!important;}
+.rowBW17 {
+	text-align: left;
+	background: #9ba2b1!important;}
+.rowBW115 {
+	text-align: left;
+	background: #78839c!important;}
+.rowBW163 td{
+	text-align: left;
+	color: #ffffff!important;
+	background: #1b253b!important;
+	border-top: 2px solid #272727;
+}
+
+
+
+.rowBW0 {
+	text-align: left;
+	background: #e8eeec!important;}
+.rowBW1 {
+	text-align: left;
+	background: #ccd6dc!important;}
+.rowBW3 {
+	text-align: left;
+	background: #9ba2b1!important;}
+.rowBW7 {
+	text-align: left;
+	background: #87939f!important;}
+.rowBW31 td{
+	color: #ffffff!important;
+	background: #32454c!important;
+	border-top: 2px solid #272727;
+}
+
+/*Estilos para el componente card*/
+.card { background-color: #73a1d9; padding: .0em; text-align: center; border-radius: 1px; padding-bottom: .5em; }
+.card .ui-panel-titlebar { background-color: #4b86ce; border-width: 0px; border-radius: 1px; margin-bottom: .5em; margin-right: 0px;}
+.card .ui-widget-content { font-size: large; color: white; }
+.card .ui-panel-title { margin: 0px;}
+.cardRed { background-color: #ec5446 !important; }
+.cardRed .ui-panel-titlebar { background-color: #e72918 !important; }
+.cardGreen { background-color: #4bce54 !important; }
+.cardGreen .ui-panel-titlebar { background-color: #31b43a !important; }
+
+
+/* Estilos para el Calendario FECHA DE EJECUCION */
+.cssFechaEjecucion { height: 545px; !important; }
+.ui-datagrid.ui-widget.grid100.procesoPeriodico,
+.ui-panelgrid.ui-widget.panelGridNoBorder.procesoPeriodico {
+	height: 80px;
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+div.procesoPeriodico div.ui-grid div.ui-g div.ui-datagrid-column{
+	height: 100%;
+	width: 12%;
+}
+.procesoPeriodico.ui-disabled { opacity: 0.4; filter:Alpha(Opacity=40); }
+
+.recordatorio_falta_premisas 						{ background-color: rgba( 83, 140, 254, 0.3); }
+.recordatorio_falta_carga_volumen_periodo_siguiente { background-color: rgba(176, 183, 186, 0.3); }
+.clonacion_de_calendario_de_procesos 				{ background-color: rgba( 50, 120, 152, 0.3); }
+.clonacion_configuracion_periodo_actual_a_siguiente { background-color: rgba( 81, 174,  48, 0.3); }
+.recordatorio_falta_informacion_costos_ponderados 	{ background-color: rgba(234,  79,  68, 0.3); }
+.clonacion_precio_otros 							{ background-color: rgba(250, 170,   0, 0.3); }
+
+
+ 
+/* css para row de protocolos de error*/
+.ui-state-correccion-completa { background-color: rgba(0,255,30,0.5); }
+.ui-state-correccion-iniciada { background-color: rgba(255,255,0,0.5); }
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.logoVW {
+    --logo-size: 55px;
+    --margin-size: 14px;
+    color: rgb(0, 30, 80);
+    pointer-events: auto;
+    width: 100%;
+}
+.logoVW svg {
+    fill: rgb(0, 30, 80);
+    width: var(--logo-size);
+    height: var(--logo-size);
+    display: inline;
+    margin-top: 8px;
+	margin-bottom: 9px;
+}
+
+.logoVW img {
+	padding-top: 15px; 
+	padding-bottom: 15px; 
+	padding-left: 30px; 
+	padding-right: 30px;
+    display: none;
+    margin-top: 0px;
+	margin-bottom: 7px;
+}
+ 
+#mainGrid {
+	margin-left: 0px; margin-right:0px; margin-top: 0px; margin-bottom: 0px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.grid-containerMenuOpen {
+  grid-template-columns: 1.25fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.leftBar {
+  display: grid;
+  grid-template-columns: 70px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logoArea"
+    "menuArea"
+    "menuArea"
+    "menuArea"
+    "menuArea"
+    "menuArea"
+    "menuArea"
+    "menuArea"
+    "menuArea"
+    "menuArea"
+    "menuArea"
+    "fixedMenu";
+  grid-area: 1 / 1 / 13 / 2;
+  	overflow-x: visible; /* Disable horizontal scroll */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+.leftBarOpen {
+	overflow-x: inherit; /* Disable horizontal scroll */
+	grid-template-columns: 1fr;
+}
+
+.menuArea { grid-area: menuArea; }
+
+.fixedMenu { grid-area: fixedMenu; }
+
+.logoArea { 
+	grid-area: logoArea; 
+	/*display: flex;
+	align-items: center;*/
+	background-color: #F2F2F2;
+	display: flex;
+	align-items: center;
+}
+.logoAreaOpen { 
+	/*background-color: #FFFFFF;*/ /*Revisar caso porque el logo no debe tener fondo gris*/
+}
+
+.headerBar {
+  display: grid;
+  grid-template-columns: 30px 1fr 30%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "openClose headerArea userData";
+  grid-area: 1 / 2 / 2 / 13;
+  background-color: #F2F2F2;
+}
+
+#openClose { 
+	background-color: #e2e9ec;
+	grid-area: openClose; 
+	display: flex;
+	align-items: end;
+	width: 100%;
+}
+#openClose:hover {
+	background-color: #A8ADB3;
+}
+#openClose a { 
+	width: 100%;
+}
+#openCloseIcon {
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.userData { grid-area: userData; }
+
+.headerArea { 
+	grid-area: headerArea;
+	margin-left: 15px; 
+}
+
+.breadcrumbBar {
+  display: grid;
+  grid-template-columns: 55px 9fr;
+  grid-template-rows: 30px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "favoriteArea breadcrumbArea";
+  grid-area: 2 / 2 / 3 / 11;
+}
+#favoriteArea { 
+	grid-area: favoriteArea; 
+	display: flex;
+	align-items: end;
+	width: 100%;
+	margin-left: 5px;
+}
+#favoriteArea a { 
+	width: 100%;
+}
+#favoriteAreaIcon {
+	font-size: 1.5em;
+	width: 100%;
+}
+.breadcrumbArea { 
+	grid-area: breadcrumbArea; 
+	margin-top: 5px;
+}
+.configurationBar {
+  display: grid;
+  grid-template-columns: 9fr;
+  grid-template-rows: 30px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "configArea";
+  grid-area: 2 / 11 / 3 / 13;
+  margin-top: 4px;
+}
+.configArea { 
+	grid-area: configArea; 
+}
+.workspaceArea { 
+	display: grid;
+	grid-template-columns: 11fr;
+	grid-template-rows: 11fr;
+	gap: 0px 0px;
+	grid-template-areas: "divContent";
+	grid-area: 2 / 2 / 13 / 13;
+	margin-top: 35px;
+}
+.divContent { 
+	grid-area: divContent; 
+	overflow-y: auto;
+}
+
+.messagesArea { grid-area: 2 / 10 / 11 / 13; }
+
+.dataPopup { grid-area: 2 / 10 / 11 / 13; }
+
+.logoutMenu {
+	background-color: #215ACC;
+	height: 75px;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+}
+.menuGroupHeader h3.ui-widget.ui-panelmenu-header {
+	display: grid;
+	background-color: #00B1EB;
+	height: 40px;
+	align-items: center;
+	background-image: none;
+}
+.menuGroupHeader h3.ui-widget.ui-panelmenu-header a {
+	align-items: center;
+	font-size: 12px;
+	font-weight: bold; 
+	color: #FFFFFF;
+	text-shadow: none;
+}
+
+.logoutMenu a {
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+}
+
+.menuItem {
+	height: 40px;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+	background-color: transparent;
+	margin-top: 10px;
+}
+
+.menuItemSelected {
+	background-color: #00B1EB; 
+	!important;
+}
+
+.menuItem a {
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+}
+
+.finalMenuItem:hover {
+	background-color: #89e2ff;
+}
+
+.MenuTitleLabel {
+	font-size: 16px;
+	color: #215ACC;
+	font-weight: bold;
+}
+
+.ui-panelmenu .ui-panelmenu-panel{
+	padding-left: 20px;
+}
+
+.ui-panelmenu .ui-panelmenu-header a {
+	font-size: 12px;
+}
+	
+.ui-panelmenu .ui-panelmenu-header {
+	text-align: left;
+}
+
+.ui-panelmenu .ui-menuitem-link {
+	text-align: left;
+}
+
+.ui-panelmenu .ui-menuitem {
+	width: 100%;
+}
+.ui-menu.ui-tieredmenu.ui-widget.ui-widget-content.ui-corner-all.ui-helper-clearfix {
+	width: 100%;
+}
+
+.ui-panelmenu {
+	width: 100%;
+	/*display: none;*/
+}
+
+.ui-menuitem-text {
+    font-size: 12px;
+}
+
+.menuDiv.gridNoBorder.ui-overlay-visible,
+.menuDiv.gridNoBorder.ui-overlay-hidden {
+	left: 65px;
+	height: 95%;
+	top: 0px !important;
+}
+
+.menuDiv.menuApilado.ui-overlay-visible a.ui-overlaypanel-close.ui-state-default span.ui-icon.ui-icon-closethick {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.menuApilado {
+	width: 450px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.menuEncadenado {
+	width: 200px;
+	overflow: visible;
+}
+
+.ui-widget-header {
+    font-weight: normal; 
+}
+
+.ui-selectonemenu-items-wrapper {
+	font-size: 0.75em;
+}
+
+.menuTooltip {
+	font-size: 1.2em;
+}
+.ui-tooltip.ui-widget.menuTooltip.ui-tooltip-right div.ui-tooltip-text {
+	background-color: #215ACC;
+	    font-size: 13px;
+}
+.ui-tooltip.ui-widget.menuTooltip.ui-tooltip-right div.ui-tooltip-arrow {
+	border-right-color: #215ACC;
+}
+.ui-column-title {
+	font-size: 10px;
+}
+.ui-panelgrid .ui-widget .panelGridNoBorder{
+	margin-top: 1px;
+}
+.ui-datatable .ui-datatable-header {
+    padding-top: 0px;
+ 	padding-bottom: 0px;
+}
+.ui-datatable-even td.actions-column,
+.ui-datatable-odd td.actions-column {
+	padding: 0px 0px;
+}
+.ui-datatable .ui-sortable-column {
+    vertical-align: bottom;
+}
+
+.ui-fieldset {
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.menuTypeOption, .menuTypeOptionSelected {
+	vertical-align: top;
+}
+.menuTypeOptionSelected {
+	background-color: blue;
+}
+
+.ui-dialog .ui-dialog-title {
+    margin: .3em 30px .2em 5px;
+}
+
+.ui-dialog.ui-widget-content .ui-dialog-title{
+    font-size:1.75em;
+}
+
+.ui-columntoggler .ui-columntoggler-item label {
+    font-size: 1.1em;
+}
+#blockUI_blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100vw;
+	height: 100vh;
+}
+#blockUI {
+    position: fixed;
+	text-align: center;
+	padding: 1em;
+} 
+.vw-wait-message {
+	font-size: 1.75em;
+}
+.vw-wait-message-small {
+	font-size: 1.25em;
+	display: block;
+	white-space: break-spaces;
+}
+
+.ui-outputlabel {
+	margin-left: 10px;
+}
+
+.vw-icon-label{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.volumenFields {
+	min-width: 50%;
+    max-width: 75%;
+    text-align: right;
+}
+.ui-selectonemenu-panel .ui-selectonemenu-filter-container .ui-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Padding column */
+.column-padding-small { padding: 2px !important; }
+.column-padding-normal { padding: 5px !important; }
+.column-padding-large { padding: 10px !important; }
+
+fieldset div.ui-fieldset-content { height: 100%; }

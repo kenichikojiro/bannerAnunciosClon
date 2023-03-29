@@ -1,0 +1,445 @@
+@CHARSET "ISO-8859-1";
+
+/*Incluir estilos generales */
+@import url('vw-Styles.css');
+
+
+/*Estilos que aplican a multiples objetos*/
+input,select,textarea,button,keygen,isindex{ border-width:1px; }
+textarea,input[type="text"],input[type="password"],select{ border-width:1px; border-style:solid; font-size:10px; background-repeat:no-repeat; background-position:1px 1px; background-image:url(../img/inputBackgroundImage.png); }
+textarea[disabled],input[type="text"][disabled],input[type="password"][disabled],select[disabled]{ cursor:default; }
+
+/*Para todos los elementos*/
+* { font-family: Verdana,CelliniTF-Bold,VW Headline Black,Arial,sans-serif; font-size: 9px; }
+
+/*Para el tag HTML*/
+html { height: calc(100% - 10px); }
+
+/*Para el tag BODY*/
+body { margin: 0; padding: 0; height: 100%; width: calc(100% - 9px); background: #ffffff url('../img/body-bg.jpg') left bottom repeat; }
+
+/*Para los elementos HR o separadores de temas desplegado muchas veces como regla horizontal*/
+hr { border-width:1px; border-style:solid; }
+
+/*Para el tag FIELDSET*/
+fieldset { border-width:1px; border-style:solid; padding:10px; margin: 0; }
+
+/*Para las listas de elementos*/
+ul.layout { list-style: none; }
+
+/*Para las ligas o vinculos*/
+a { outline: none; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:visited{ }
+a.show, a.hide { font-size: 10px; display: block; }
+
+/*Para todos los parrafos*/
+p { margin: 0; padding: 0 0 10px; }
+
+
+/*DIV del template o cualquier elemento cuyo ID corresponda a*/
+#divHeader, #divMenu, #divContent, #divFooter { 
+	width: calc(100% - 10px); position: absolute; 
+	background: #FFFFFF url('../img/body-bg.jpg') left bottom repeat; }
+
+#divHeader  { top: 0;  height: 85px; }
+#divMenu    { top: 85px; height: 40px; }
+#divContent { top: 125px; bottom: 58px; overflow: auto; }
+#divFooter  { height: 55px; bottom: 0px; margin-left: 5px; }
+
+.pageHeader  { height: 85px; width: calc(100% - 10px); }
+.pageFooter  { height: 55px; width: calc(100% - 10px); margin-left: 5px; }
+.pageMenunorth  { height: 40px; width: calc(100% - 10px); }
+.pageMenusouth  { height: 40px; width: calc(100% - 10px); }
+.pageMenueast { min-width: 150px; max-width: 400px; !important;}
+.pageMenuwest { min-width: 150px; max-width: 400px; !important;}
+.pageContent { width: 300px; overflow: auto; }
+
+/*Marca de agua de la pagina Home*/
+.LogoWaterMark { opacity: 0.15; filter:alpha(opacity=75); }
+.ui-layout-unit .ui-layout-unit-content { background:transparent; }
+#divContent, #mainContent { background-size: 100%; background-repeat: no-repeat;  background-position: center center; 
+			   background-image: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%,rgba(255,255,255,0.9) 100%), url('../img/logoEmpresaWM.png');
+}
+
+/*Encabezados del sistema*/
+.HeaderLabel, .TitleLabel, .Title2Label, .FooterLabel, .FooterLabelSmall { font-weight: bold; text-align:left; }
+.HeaderLabel { font-size:14pt; padding:5px 5px; text-align:center; }
+.TitleLabel  { font-size:12pt; padding:5px 5px; text-align:center; }
+.Title2Label { font-size:9pt; padding:5px 5px; text-align:center; }
+.FooterLabel { font-size:9pt; }
+.FooterLabelSmall { font-size:8pt; }
+
+/*Etiquetas y separadores de Camino de Migas*/
+.ui-outputlabel.ui-widget.BreadCrumbLabel {
+	font-size: 9pt; font-weight: bold; text-align: left; font-style: italic;
+}
+.ui-outputlabel.ui-widget.BreadCrumbSeparator {
+	font-size: 10pt; font-weight: bold; text-align: left; font-style: italic;
+}
+
+/*Etiquetas para campos de captura*/
+.FieldLabel, .FieldLabelLeft, .FieldLabelBig, .FieldLabelCenter, .FieldLabelBigCenter, .FieldLabelRight, .FieldLabelBigRight, .FieldLabelReq,
+.FieldLabelSmall, .FieldLabelSmallLeft, .FieldLabelSmallCenter, .FieldLabelSmallRight,
+.FieldLabelMedium, .FieldLabelMediumLeft, .FieldLabelMediumCenter, .FieldLabelMediumRight, .FieldLabelMediumReq { font-weight: bold; }
+
+.FieldLabelBig, .FieldLabelBigLeft, .FieldLabelBigRight, .FieldLabelBigCenter { font-size:10pt; }
+.FieldLabelMedium, .FieldLabelMediumLeft, .FieldLabelMediumCenter, .FieldLabelMediumRight, .FieldLabelMediumReq { font-size: 9pt; }
+.FieldLabel, .FieldLabelLeft, .FieldLabelCenter, .FieldLabelRight, .FieldLabelReq { font-size: 8pt; }
+.FieldLabelSmall, .FieldLabelSmallCenter, .FieldLabelSmallRight { font-size: 7pt; }
+
+/*Campos de captura*/
+.FieldData, .FieldDataRight, .FieldDataCenter { font-size: 8pt; font-weight:normal; }
+.FieldDataBig, .FieldDataBigRight, .FieldDataBigCenter { font-size:10pt; font-weight:normal; }
+
+.FieldLabelReq { display: inline-block; position: relative; margin-left: .4em; }
+.FieldLabelReq:before { content:"* "; display: block; position: absolute; left: -.8em; top: -.1em; }
+
+/*Alineacion a la izquierda*/
+.gridAlignLeft, .CellLeft, .FieldLabelLeft, .FieldLabelBigLeft, .FieldData, .FieldDataBig, .ButtonPanelLeft, 
+.FieldLabelSmallLeft { text-align:left; }
+
+/*Alineacion al centro*/
+.gridAlignCenter, .CellCenter, .FieldLabelCenter, .FieldLabelBigCenter,.FieldLabelSmallCenter, .FieldDataCenter, 
+.FieldDataBigCenter, .ButtonPanel, .DataPanel, .DataTable { text-align:center; }
+
+/*Alineacion a la derecha*/
+.gridAlignRight, .CellRight, .FieldLabel, .FieldLabelRight, .FieldLabelBig, .FieldLabelBigRight, .FieldLabelSmall, 
+.FieldLabelSmallRight, .FieldDataRight, .FieldDataBigRight, .ButtonPanelRight, .FieldLabelReq { text-align:right; }
+
+/*Elementos de panel de botones*/
+.ButtonPanel, .ButtonPanelLeft, .ButtonPanelCenter, .ButtonPanelRight { border: 0px; }
+
+/*Elementos de tablas*/
+th { font-size: 9pt; font-weight: bold; text-align: left; }
+td { font-size: 8pt; font-weight: normal; }
+.ui-datatable-even { background-image: none; !important; }
+.ui-datatable-odd { background-image: none; !important; }
+.tableRowSelected { background-image: none; !important; }
+
+/*Ancho de celdas*/
+.grid1{ width: 1% }
+.grid5{ width: 5% }
+.grid10 { width: 10%; }
+.grid15 { width: 15%; }
+.grid20 { width: 20%; }
+.grid25 { width: 25%; }
+.grid30 { width: 30%; }
+.grid35 { width: 35%; }
+.grid40 { width: 40%; }
+.grid45 { width: 45%; }
+.grid50 { width: 50%; }
+.grid55 { width: 55%; }
+.grid60 { width: 60%; }
+.grid65 { width: 65%; }
+.grid70 { width: 70%; }
+.grid75 { width: 75%; }
+.grid80 { width: 80%; }
+.grid85 { width: 85%; }
+.grid90 { width: 90%; }
+.grid95 { width: 95%; }
+.grid100, .DataTable { width: 100%; }
+
+/*Alineacion vertical de celdas*/
+.gridAlignTop, .DataTable { vertical-align: top; }
+.gridAlignMiddle { vertical-align: middle; }
+.gridAlignBottom, .PanelGridColumns { vertical-align: bottom; }
+
+/*Para todos los botones se aplica un estilo general, input tipo reset submit o button con la clase que se indica*/
+button,input[type="reset"],input[type="submit"],input[type="button"]{ border-width:1px; font-size:9px; background-repeat:repeat-x; background-position:top left; background-image:url(../img/buttonBackgroundImage.png); }
+button:hover,input[type="reset"]:hover,input[type="submit"]:hover,input[type="button"]:hover{ background-position:bottom left; background-repeat:repeat-x; background-image:url(../img/buttonHoverBackgroundImage.png); }
+button[disabled],input[type="reset"][disabled],input[type="submit"][disabled],input[type="button"][disabled]{ background-image:url(../img/buttonDisabledBackgroundImage.png); background-position:top left; }
+
+.ui-button.buttonAdd,.ui-button.buttonEdit,.ui-button.buttonSave,.ui-button.buttonDiscard,.ui-button.buttonDelete,
+.ui-button.buttonFind,.ui-button.buttonAccept,.ui-button.buttonCancel,.ui-button.buttonXLS,.ui-button.buttonPDF,
+.ui-button.buttonExport,.ui-button.buttonDetail,.ui-button.buttonZoom,.ui-button.buttonImage,.ui-button.buttonPrint,
+.ui-button.buttonInactiva,.ui-button.buttonResizing,.ui-button.buttonMailSend,
+.ui-button.buttonCash,.ui-button.buttonPreview,.ui-button.buttonAttach,.ui-button.buttonAprobacion,
+button.buttonAdd,input[type="reset"].buttonAdd,input[type="submit"].buttonAdd,input[type="button"].buttonAdd,
+button.buttonEdit,input[type="reset"].buttonEdit,input[type="submit"].buttonEdit,input[type="button"].buttonEdit,
+button.buttonAprobacion,input[type="reset"].buttonAprobacion,input[type="submit"].buttonAprobacion,input[type="button"].buttonAprobacion,
+button.buttonSave,input[type="reset"].buttonSave,input[type="submit"].buttonSave,input[type="button"].buttonSave,
+button.buttonDiscard,input[type="reset"].buttonDiscard,input[type="submit"].buttonDiscard,input[type="button"].buttonDiscard,
+button.buttonDelete,input[type="reset"].buttonDelete,input[type="submit"].buttonDelete,input[type="button"].buttonDelete,
+button.buttonFind,input[type="reset"].buttonFind,input[type="submit"].buttonFind,input[type="button"].buttonFind,
+button.buttonAccept,input[type="reset"].buttonAccept,input[type="submit"].buttonAccept,input[type="button"].buttonAccept,
+button.buttonCancel,input[type="reset"].buttonCancel,input[type="submit"].buttonCancel,input[type="button"].buttonCancel,
+button.buttonXLS,input[type="reset"].buttonXLS,input[type="submit"].buttonXLS,input[type="button"].buttonXLS,
+button.buttonPDF,input[type="reset"].buttonPDF,input[type="submit"].buttonPDF,input[type="button"].buttonPDF,
+button.buttonExport,input[type="reset"].buttonExport,input[type="submit"].buttonExport,input[type="button"].buttonExport,
+button.buttonDetail,input[type="reset"].buttonDetail,input[type="submit"].buttonDetail,input[type="button"].buttonDetail,
+button.buttonZoom,input[type="reset"].buttonZoom,input[type="submit"].buttonZoom,input[type="button"].buttonZoom,
+button.buttonImage,input[type="reset"].buttonImage,input[type="submit"].buttonImage,input[type="button"].buttonImage,
+button.buttonPrint,input[type="reset"].buttonPrint,input[type="submit"].buttonPrint,input[type="button"].buttonPrint,
+button.buttonInactiva,input[type="reset"].buttonInactiva,input[type="submit"].buttonInactiva,input[type="button"].buttonInactiva,
+button.buttonResizing,input[type="reset"].buttonResizing,input[type="submit"].buttonResizing,input[type="button"].buttonResizing,
+button.buttonMailSend,input[type="reset"].buttonMailSend,input[type="submit"].buttonMailSend,input[type="button"].buttonMailSend,
+button.buttonViewHideCol,input[type="reset"].buttonViewHideCol,input[type="submit"].buttonViewHideCol,input[type="button"].buttonViewHideCol,
+button.buttonUp,input[type="reset"].buttonUp,input[type="submit"].buttonUp,input[type="button"].buttonUp,
+button.buttonDown,input[type="reset"].buttonDown,input[type="submit"].buttonDown,input[type="button"].buttonDown,
+button.buttonReload,input[type="reset"].buttonReload,input[type="submit"].buttonReload,input[type="button"].buttonReload,
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only
+{ cursor:pointer; background-position:3px 3px; background-repeat:no-repeat; display:inline-block; padding:2px 2px 2px 21px; }
+
+
+/*Para cada tipo de boton indicado en el bloque anterior, se especifica la imagen a emplear en estado normal*/
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonAdd,.ui-button.buttonAdd,button.buttonAdd,input[type="reset"].buttonAdd,input[type="submit"].buttonAdd,input[type="button"].buttonAdd { background-image:url(../img/agregar.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonEdit,.ui-button.buttonEdit,button.buttonEdit,input[type="reset"].buttonEdit,input[type="submit"].buttonEdit,input[type="button"].buttonEdit { background-image:url(../img/editar.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonSave,.ui-button.buttonSave,button.buttonSave,input[type="reset"].buttonSave,input[type="submit"].buttonSave,input[type="button"].buttonSave { background-image:url(../img/guardar.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonDiscard,.ui-button.buttonDiscard,button.buttonDiscard,input[type="reset"].buttonDiscard,input[type="submit"].buttonDiscard,input[type="button"].buttonDiscard { background-image:url(../img/deshacer.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonDelete,.ui-button.buttonDelete,button.buttonDelete,input[type="reset"].buttonDelete,input[type="submit"].buttonDelete,input[type="button"].buttonDelete { background-image:url(../img/eliminar.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonFind,.ui-button.buttonFind,button.buttonFind,input[type="reset"].buttonFind,input[type="submit"].buttonFind,input[type="button"].buttonFind { background-image:url(../img/buscar.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonAccept,.ui-button.buttonAccept,button.buttonAccept,input[type="reset"].buttonAccept,input[type="submit"].buttonAccept,input[type="button"].buttonAccept { background-image:url(../img/aceptar.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonCancel,.ui-button.buttonCancel,button.buttonCancel,input[type="reset"].buttonCancel,input[type="submit"].buttonCancel,input[type="button"].buttonCancel {background-image:url(../img/cancelar.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonXLS,.ui-button.buttonXLS,button.buttonXLS,input[type="reset"].buttonXLS,input[type="submit"].buttonXLS,input[type="button"].buttonXLS { background-image: url(../img/excel.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonPDF,.ui-button.buttonPDF,button.buttonPDF,input[type="reset"].buttonPDF,input[type="submit"].buttonPDF,input[type="button"].buttonPDF { background-image: url(../img/pdf.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonExport,.ui-button.buttonExport,button.buttonExport,input[type="reset"].buttonExport,input[type="submit"].buttonExport,input[type="button"].buttonExport { background-image: url(../img/export.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonDetail,.ui-button.buttonDetail,button.buttonDetail,input[type="reset"].buttonDetail,input[type="submit"].buttonDetail,input[type="button"].buttonDetail { background-image: url(../img/detalle.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonZoom,.ui-button.buttonZoom,button.buttonZoom,input[type="reset"].buttonZoom,input[type="submit"].buttonZoom,input[type="button"].buttonZoom { background-image: url(../img/zoom.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonImage,.ui-button.buttonImage,button.buttonImage,input[type="reset"].buttonImage,input[type="submit"].buttonImage,input[type="button"].buttonImage { background-image: url(../img/image.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonPrint,.ui-button.buttonPrint,button.buttonPrint,input[type="reset"].buttonPrint,input[type="submit"].buttonPrint,input[type="button"].buttonPrint { background-image: url(../img/print.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonInactiva,.ui-button.buttonInactiva,button.buttonInactiva,input[type="reset"].buttonInactiva,input[type="submit"].buttonInactiva,input[type="button"].buttonInactiva { background-image:url(../img/cancelar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonResizing,.ui-button.buttonResizing,button.buttonResizing,input[type="reset"].buttonResizing,input[type="submit"].buttonResizing,input[type="button"].buttonResizing { background-image:url(../img/resize.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonMailSend,.ui-button.buttonMailSend,button.buttonMailSend,input[type="reset"].buttonMailSend,input[type="submit"].buttonMailSend,input[type="button"].buttonMailSend { background-image:url(../img/mailSend.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonViewHideCol,.ui-button.buttonViewHideCol,button.buttonViewHideCol,input[type="reset"].buttonViewHideCol,input[type="submit"].buttonViewHideCol,input[type="button"].buttonViewHideCol { background-image:url(../img/viewHideCol.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonUp,.ui-button.buttonUp,button.buttonUp,input[type="reset"].buttonUp,input[type="submit"].buttonUp,input[type="button"].buttonUp { background-image:url(../img/up.png);}
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonDown,.ui-button.buttonDown,button.buttonDown,input[type="reset"].buttonDown,input[type="submit"].buttonDown,input[type="button"].buttonDown { background-image:url(../img/down.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonReload,.ui-button.buttonReload,button.buttonReload,input[type="reset"].buttonReload,input[type="submit"].buttonReload,input[type="button"].buttonReload { background-image:url(../img/refresh.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonCash,.ui-button.buttonCash,button.buttonCash,input[type="reset"].buttonCash,input[type="submit"].buttonCash,input[type="button"].buttonCash { background-image:url(../img/cash.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonPreview,.ui-button.buttonPreview,button.buttonPreview,input[type="reset"].buttonPreview,input[type="submit"].buttonPreview,input[type="button"].buttonPreview { background-image:url(../img/preview.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonAttach,.ui-button.buttonAttach,button.buttonAttach,input[type="reset"].buttonAttach,input[type="submit"].buttonAttach,input[type="button"].buttonAttach { background-image:url(../img/attachment.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.buttonAprobacion,.ui-button.buttonAprobacion,button.buttonAprobacion,input[type="reset"].buttonAprobacion,input[type="submit"].buttonAprobacion,input[type="button"].buttonAprobacion { background-image:url(../img/zoom.png); }
+
+/*Para cada tipo de boton indicado en el bloque anterior, se especifica la imagen a emplear en estado inactivo*/
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonAdd,.ui-button.buttonAdd,button[disabled].buttonAdd,input[type="reset"][disabled].buttonAdd,input[type="submit"][disabled].buttonAdd,input[type="button"][disabled].buttonAdd { background-image:url(../img/agregar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonEdit,.ui-button.buttonEdit,button[disabled].buttonEdit,input[type="reset"][disabled].buttonEdit,input[type="submit"][disabled].buttonEdit,input[type="button"][disabled].buttonEdit { background-image:url(../img/editar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonSave,.ui-button.buttonSave,button[disabled].buttonSave,input[type="reset"][disabled].buttonSave,input[type="submit"][disabled].buttonSave,input[type="button"][disabled].buttonSave { background-image:url(../img/guardar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonDiscard,.ui-button.buttonDiscard,button[disabled].buttonDiscard,input[type="reset"][disabled].buttonDiscard,input[type="submit"][disabled].buttonDiscard,input[type="button"][disabled].buttonDiscard { background-image:url(../img/deshacer-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonDelete,.ui-button.buttonDelete,button[disabled].buttonDelete,input[type="reset"][disabled].buttonDelete,input[type="submit"][disabled].buttonDelete,input[type="button"][disabled].buttonDelete { background-image:url(../img/eliminar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonFind,.ui-button.buttonFind,button[disabled].buttonFind,input[type="reset"][disabled].buttonFind,input[type="submit"][disabled].buttonFind,input[type="button"][disabled].buttonFind { background-image:url(../img/buscar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonAccept,.ui-button.buttonAccept,button[disabled].buttonAccept,input[type="reset"][disabled].buttonAccept,input[type="submit"][disabled].buttonAccept,input[type="button"][disabled].buttonAccept { background-image: url(../img/aceptar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonCancel,.ui-button.buttonCancel,button[disabled].buttonCancel,input[type="reset"][disabled].buttonCancel,input[type="submit"][disabled].buttonCancel,input[type="button"][disabled].buttonCancel { background-image:url(../img/cancelar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonXLS,.ui-button.buttonXLS,button[disabled].buttonXLS,input[type="reset"][disabled].buttonXLS,input[type="submit"][disabled].buttonXLS,input[type="button"][disabled].buttonXLS { background-image: url(../img/excel-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonPDF,.ui-button.buttonPDF,button[disabled].buttonPDF,input[type="reset"][disabled].buttonPDF,input[type="submit"][disabled].buttonPDF,input[type="button"][disabled].buttonPDF { background-image: url(../img/pdf-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonExport,.ui-button.buttonExport,button[disabled].buttonExport,input[type="reset"][disabled].buttonExport,input[type="submit"][disabled].buttonExport,input[type="button"][disabled].buttonExport { background-image: url(../img/export-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonDetail,.ui-button.buttonDetail,button[disabled].buttonDetail,input[type="reset"][disabled].buttonDetail,input[type="submit"][disabled].buttonDetail,input[type="button"][disabled].buttonDetail { background-image: url(../img/detalle-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonZoom,.ui-button.buttonZoom,button[disabled].buttonZoom,input[type="reset"][disabled].buttonZoom,input[type="submit"][disabled].buttonZoom,input[type="button"][disabled].buttonZoom { background-image: url(../img/zoom-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonImage,.ui-button.buttonImage,button[disabled].buttonImage,input[type="reset"][disabled].buttonImage,input[type="submit"][disabled].buttonImage,input[type="button"][disabled].buttonImage { background-image: url(../img/image-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonPrint,.ui-button.buttonPrint,button[disabled].buttonPrint,input[type="reset"][disabled].buttonPrint,input[type="submit"][disabled].buttonPrint,input[type="button"][disabled].buttonPrint { background-image: url(../img/print-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonInactiva,.ui-button.buttonInactiva,button[disabled].buttonInactiva,input[type="reset"][disabled].buttonInactiva,input[type="submit"][disabled].buttonInactiva,input[type="button"][disabled].buttonInactiva { background-image:url(../img/cancelar-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonResizing,.ui-button.buttonResizing,button[disabled].buttonResizing,input[type="reset"][disabled].buttonResizing,input[type="submit"][disabled].buttonResizing,input[type="button"][disabled].buttonResizing { background-image:url(../img/resize.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonMailSend,.ui-button.buttonMailSend,button[disabled].buttonMailSend,input[type="reset"][disabled].buttonMailSend,input[type="submit"][disabled].buttonMailSend,input[type="button"][disabled].buttonMailSend { background-image:url(../img/mailSend-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonViewHideCol,.ui-button.buttonViewHideCol,button[disabled].buttonViewHideCol,input[type="reset"][disabled].buttonViewHideCol,input[type="submit"][disabled].buttonViewHideCol,input[type="button"][disabled].buttonViewHideCol { background-image:url(../img/viewHideCol-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonUp,.ui-button.buttonUp,button[disabled].buttonUp,input[type="reset"][disabled].buttonUp,input[type="submit"][disabled].buttonUp,input[type="button"][disabled].buttonUp { background-image:url(../img/up-dis.png); }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonDown,.ui-button.buttonDown,button[disabled].buttonDown,input[type="reset"][disabled].buttonDown,input[type="submit"][disabled].buttonDown,input[type="button"][disabled].buttonDown { background-image:url(../img/down-dis.png); } }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonReload,.ui-button.buttonReload,button[disabled].buttonReload,input[type="reset"][disabled].buttonReload,input[type="submit"][disabled].buttonReload,input[type="button"][disabled].buttonReload { background-image:url(../img/refresh-dis.png); } }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonCash,.ui-button.buttonCash,button[disabled].buttonCash,input[type="reset"][disabled].buttonCash,input[type="submit"][disabled].buttonCash,input[type="button"][disabled].buttonCash { background-image:url(../img/cash-dis.png); } }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonPreview,.ui-button.buttonPreview,button[disabled].buttonPreview,input[type="reset"][disabled].buttonPreview,input[type="submit"][disabled].buttonPreview,input[type="button"][disabled].buttonPreview { background-image:url(../img/preview-dis.png); } }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonAttach,.ui-button.buttonAttach,button[disabled].buttonAttach,input[type="reset"][disabled].buttonAttach,input[type="submit"][disabled].buttonAttach,input[type="button"][disabled].buttonAttach { background-image:url(../img/attachment-dis.png); } }
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-disabled.buttonAprobacion,.ui-button.buttonAprobacion,button[disabled].buttonAprobacion,input[type="reset"][disabled].buttonAprobacion,input[type="submit"][disabled].buttonAprobacion,input[type="button"][disabled].buttonAprobacion { background-image:url(../img/zoom-dis.png); } }
+
+/*Para elementos tipo consola de mensajes que quiera ampliarse el tama�o de letra*/
+.zoomedLog { font-size: 10pt; }
+
+/*Para paneles inactivos se aplica un estilo gradual de blanco a gris*/
+.panelDis { background-image: linear-gradient(to bottom, #FFFFFF 5%, #CCCCCC 100%); }
+
+/*Para elementos del menu de prime faces*/
+.menu-bar { width: calc(100% - 6px); }
+.ui-menuitem-text{ width: auto; }
+.ui-menuitem { width: 220px; }
+.ui-menu.ui-megamenu .ui-menu-child .ui-menu-list { width: 220px;}
+.ui-menu .ui-menu-parent .ui-menu-child { font-size:10px; width:220px; display:none; padding:0.2em; position:absolute; margin:0; outline:0; line-height:1.2; text-decoration:none; list-style:none; }
+.ui-menuitem-text { font-size: 10px; }
+.ui-menu-list { font-size: 10px; }
+.ui-menubar .ui-widget-header { font-size: 10px; }
+
+/*Para elementos de tipo radio button de prime faces*/
+.ui-radiobutton .ui-radiobutton-box { width: 11px; height: 11px; line-height: 11px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.ui-radiobutton { margin: 1px 0; width: 11px; line-height: 11px; display: inline-block; margin-top: -4px; }
+.ui-radiobutton-icon { margin-left: -2px; margin-top: -3px; }
+.ui-radiobutton.ui-radiobutton-native { margin: 0; padding: 0; }
+.ui-radiobutton.ui-radiobutton-native .ui-helper-hidden-accessible { clip: auto; position: static !important; }
+.ui-radiobutton.ui-radiobutton-native .ui-radiobutton-box { display:none; }
+
+/*Para elementos del tipo selectManyCheckbox */
+body .booleanCheckbox.ui-chkbox { width: auto; padding-right: 10px; !important }
+body .booleanCheckbox .ui-chkbox-box { display: inline-block; vertical-align: middle; margin-right: 10px; !important }
+body .booleanCheckbox .ui-chkbox-label { vertical-align: middle; margin-top: 0; margin-right: 10px; !important }
+
+/*Para elementos de objeto tipo tree node*/
+.ui-tree, .ui-treenode-label { font-size: 10pt; font-weight:normal; }
+.ui-tree .ui-treenode-label { padding: 0 3px !important; }
+.ui-tree .ui-treenode-children { margin: 1 !important; padding: 0 0 0 25px !important; }
+
+.ui-dialog-titlebar, .ui-panel-titlebar { padding:2px; border-width:1px; border-style:solid; }
+.ui-dialog-title, .ui-panel-title, .ui-dialog-title { background: transparent; border: 0px; font-size:10pt; font-weight:normal; }
+.ui-dialog-title-small, .ui-panel-title-small, .ui-dialog-title-small { background: transparent; border: 0px; font-size:9pt; font-weight:normal; }
+*.gridNoBorder{ border-collapse:collapse; padding: 0px; margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; border:0px; text-align: center; vertical-align: middle; border-radius:4px; }
+
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .55; filter:Alpha(Opacity=55); background-image: none; }
+
+.ui-icon-closethick {
+	border:1px solid #7096ab;
+	background:#85b2cb -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0));
+	font-weight:bold;
+	text-decoration:none;
+    background-position:-96px -128px;
+}
+
+.ui-dialog-titlebar-close {
+	/* Close icon */
+}
+
+.ui-dialog-titlebar-close .ui-icon{
+	background-image:url(../img/error-icon-small.png);
+	/*padding:5px 5px 5px 5px;*/
+	background-position:-3px -3px; background-repeat:no-repeat;
+}
+
+.gridNoBorder tr, .gridNoBorder td {
+    border: none;
+}
+
+.ButtonPanel.panelGridNoBorder,
+.panelGridNoBorder.ui-panelgrid>*>tr,
+.panelGridNoBorder.ui-panelgrid .ui-panelgrid-cell {
+   border: none;
+   background-color: transparent; 
+   background: none;
+}
+
+.transparentBackground,
+.transparentBackground tr,
+.transparentBackground td { background: transparent !important; }
+/*Estilos para filas seleccionadas de una tabla*/
+table tr .ui-state-highlight, table tr .ui-widget-content .ui-state-highlight, table tr .ui-widget-header .ui-state-highlight {
+    border: inherit;
+    text-shadow: none;
+}
+
+.gridCellResaltado { }
+
+/* Estilos de mensajes de error growl */
+.ui-growl { width: 400px; }
+.ui-growl-title { font-size:13px; text-align: center; }
+.ui-growl-message { width: 80%; }
+.ui-growl-message p { font-size:11px; }
+
+.catalogo-align-alfanumeric { text-align: left; }
+.catalogo-align-numeric{ text-align: right; }
+.catalogo-align-code{ text-align: center; }
+.catalogo-align-date{ text-align: center; }
+.catalogo-align-status{ text-align: center; }
+
+.item-commandLink{ display: inline-block; }
+.item-commandLink a{ display: flex; justify-content: center; flex-direction: column;}
+.item-commandLink a label { color: initial; margin-left: initial; }
+
+.dataTableFilterResponsive thead tr th input.ui-column-filter, 
+.dataTableFilterResponsive thead tr th .ui-column-customfilter .ui-selectonemenu{
+	min-width: initial !important;
+    width: 80%;
+}
+
+.dataTableFilterResponsive thead tr th input.ui-column-filter{
+	width: 100%;
+}
+
+.ui-sortable-column-icon {
+	float: left;
+	position: relative; 
+	!important
+}
+
+.ui-datatable .ui-sortable-column-icon.ui-icon {
+    background-image: none; text-indent: 0; margin: 0 0 0 .5em;
+}
+.ui-paginator > span:before, 
+.ui-sortable-column-icon:before,
+.ui-paginator-first, .ui-paginator-prev, .ui-paginator-next, .ui-paginator-last {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+  font-weight: 900;
+}
+.ui-paginator .ui-paginator-first .ui-icon, 
+.ui-paginator .ui-paginator-prev .ui-icon, 
+.ui-paginator .ui-paginator-next .ui-icon, 
+.ui-paginator .ui-paginator-last .ui-icon { display: none; }
+
+.ui-paginator-prev { filter: none; transform: rotate(180deg); }
+
+.ui-paginator > span > span, .ui-paginator a span { display: inline-block; }
+.ui-paginator-first:before { content: '\f048'; font-weight: 900; font-size: 1.2em;} 
+.ui-paginator-prev:before  { content: '\f04b'; font-weight: 900; margin-top: 5px;}
+.ui-paginator-next:before  { content: '\f04b'; font-weight: 900; }
+.ui-paginator-last:before  { content: '\f051'; font-weight: 900; font-size: 1.2em;}
+.ui-icon-carat-2-n-s:before { content: '\f0dc'; font-size: 1.7em; }
+.ui-icon-carat-2-n-s.ui-icon-triangle-1-n:before { content: '\f0de'; font-size: 1.7em; }
+.ui-icon-carat-2-n-s.ui-icon-triangle-1-s:before { content: '\f0dd'; font-size: 1.7em; }
+.ui-paginator .ui-state-disabled { opacity: .25; }
+
+.ui-columntoggler { overflow-x: hidden; }
+.ui-columntoggler .ui-columntoggler-items { margin-right: 12px; }
+
+.ui-corner-all { border-radius: 10px; }
+.ui-selectonemenu .ui-selectonemenu-trigger { border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+
+.tinySize-field { width: 40pt; }
+.tinySize-field input { width: 40pt; }
+.tinySize-selectField { width: 30pt; min-width: 30pt !important;}
+.ui-selectcheckboxmenu.tinySize-selectField { width: 46pt !important; min-width: 46pt !important; }
+.smallSize-field { width: 75pt; }
+.smallSize-field input { width: 75pt; }
+.smallSize-selectField { width: 65pt; min-width: 65pt !important;}
+.ui-selectcheckboxmenu.smallSize-selectField { width: 156pt !important; min-width: 156pt !important; }
+.normalSize-field { width: 150pt; }
+.normalSize-field input { width: 150pt; }
+.normalSize-selectField { width: 140pt; min-width: 140pt !important; }
+.ui-selectcheckboxmenu.normalSize-selectField { width: 156pt !important; min-width: 156pt !important; }
+.largeSize-field { width: 210pt; }
+.largeSize-field input { width: 210pt; }
+.largeSize-selectField { width: 200pt; min-width: 200pt !important; }
+.ui-selectcheckboxmenu.largeSize-selectField { width: 216pt !important; min-width: 216pt !important; }
+
+.ui-panel { border: 0px !important; }
+
+.catalogoProductoVistaDetalleDialog{ max-height: 500px; min-width: 760px; overflow: auto; }
+
+.catalogoFechaPanelNoBorder,
+.catalogoFechaPanelNoBorder .ui-panel-content{
+	border: none;
+	padding: 0px;
+}
+.wizardCatalogoProducto ul.ui-wizard-step-titles li.ui-wizard-step-title{
+	border-radius: 10px 20px 0px 0px;
+	font-size: 1.5em;
+}
+
+.panelProductoWizardAddConceptoCuota{
+	margin-left: auto;
+}
+
+.commandLinkProductoWizardAddConceptoCuota .vw-icon{
+	font-size: 0.7em;
+}
+
+.viewPanelTabs ul.ui-tabs-nav li.ui-tabs-header{
+	border-radius: 10px 20px 0px 0px;
+}
+
+.viewPanelTabs ul.ui-tabs-nav li.ui-tabs-header a{
+	font-size: 1.5em;
+}
+
+.panelNoBorder { border: 0px !important; }
+
+/*Para todos los textarea, input del tipo text o password y listas de seleccion*/
+textarea[disabled], input[type="text"][disabled], input[type="password"][disabled], select[disabled] {
+    -webkit-text-fill-color: #000;
+    background: #e6e6e6;
+}

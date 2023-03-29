@@ -1,0 +1,117 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FooterLandscape" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="792" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" resourceBundle="reportes/resources/CadenaIdioma" uuid="dbaf785c-1d2a-4554-ba14-c4fb51c46316">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+	<property name="net.sf.jasperreports.viewer.zoom" value="FitWidth"/>
+	<property name="net.sf.jasperreports.export.pdf.size.page.to.content" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.ignore.cell.background" value="false"/>
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.force.page.breaks" value="false"/>
+	<property name="net.sf.jasperreports.export.xls.freeze.row" value="10"/>
+	<property name="net.sf.jasperreports.export.xlsx.ignore.cell.background" value="false"/>
+	<property name="net.sf.jasperreports.export.xlsx.detect.cell.type" value="true"/>
+	<property name="net.sf.jasperreports.export.xlsx.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.xlsx.remove.empty.space.between.columns" value="true"/>
+	<property name="net.sf.jasperreports.export.xlsx.force.page.breaks" value="false"/>
+	<property name="net.sf.jasperreports.export.xlsx.freeze.row" value="10"/>
+	<property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<template><![CDATA[$P{SUBREPORT_DIR}+"template/components/vw-Styles.jrtx"]]></template>
+	<parameter name="OUTPUT_FORMAT" class="java.lang.String">
+		<defaultValueExpression><![CDATA["PDF"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["http://localhost/${rootArtifactId}-reportes/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGE_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["http://localhost/${rootArtifactId}-files/img/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NOMBRE_SISTEMA" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["${classPrefix}_DEV"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TITULO_REPORTE" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Titulo de Reporte"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="FECHA_EJECUTA" class="java.util.Date" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new Date()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="systemAbrev" class="java.lang.String">
+		<defaultValueExpression><![CDATA["ABREVIATURA"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="systemFullName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Nombre de Sistema"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imprimePortada" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[Indica si debe generarse una portada o no]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new Boolean("true")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nombreReporte" class="java.lang.String">
+		<defaultValueExpression><![CDATA["reporte_es_AR"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="formatoISO" class="java.lang.String">
+		<defaultValueExpression><![CDATA["No. Formato"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageFooter>
+		<band height="40">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="20" y="2" width="750" height="1" uuid="95d5d949-c96f-4e87-a703-48956719239b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Footer" positionType="FixRelativeToBottom" x="24" y="6" width="280" height="11" uuid="c99dc9ec-c761-4822-b691-465da8366b96"/>
+				<textFieldExpression><![CDATA[$R{GENERAL.SISTEMA}+": " + $P{NOMBRE_SISTEMA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Footer" positionType="FixRelativeToBottom" x="24" y="16" width="280" height="11" uuid="f8b0b558-5078-434e-89b7-80958d3aafd6"/>
+				<textFieldExpression><![CDATA[$R{GENERAL.ELABORO}+": "+$R{GENERAL.ELABORADOR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Footer" positionType="FixRelativeToBottom" x="24" y="26" width="280" height="11" uuid="5ccd14c8-3f23-4584-8f8e-a1ccedbc1f5c"/>
+				<textFieldExpression><![CDATA[$P{nombreReporte}+"."+$P{OUTPUT_FORMAT}.toLowerCase()+(null!=$P{formatoISO}?" / "+$P{formatoISO}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Footer" positionType="FixRelativeToBottom" x="604" y="16" width="164" height="11" uuid="5ef0139b-6583-4e50-b83c-fd72f239f36e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$R{GENERAL.EJECUCION}+": "+new SimpleDateFormat($R{GENERAL.FECHA_FORMATO}).format($P{FECHA_EJECUTA})]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master" isBlankWhenNull="true">
+				<reportElement style="Footer" positionType="FixRelativeToBottom" x="604" y="26" width="142" height="11" uuid="0f2653d3-5584-460a-aff4-3c4a836b15ef"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[String.format($R{GENERAL.PAGINACION},$V{MASTER_CURRENT_PAGE}.toString())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master" isBlankWhenNull="true">
+				<reportElement style="Footer" x="746" y="26" width="22" height="11" uuid="38f3ceb6-aa0a-4d2a-91a3-6268710a5209"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

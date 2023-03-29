@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+        		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        		http://www.liquibase.org/xml/ns/dbchangelog-ext 
+        		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"
+        logicalFilePath="ddl-DEV.xml">
+        
+        
+    <changeSet id="1" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-seguridad.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="2" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-framework.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="3" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-contentManager.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="4" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-pantallaReporte.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="5" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-trazabilidad.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="6" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-proceso.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="7" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-notificacion.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+     <!-- changeSet id="8" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-aprobacion.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet-->
+    
+    <changeSet id="10" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-baseAppFunctions.sql" encoding="UTF-8" endDelimiter="|" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="11" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-baseAppViews.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="12" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-baseAppComments.sql" encoding="UTF-8" endDelimiter=";" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <!--changeSet id="13" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-storedproc.sql" encoding="UTF-8" endDelimiter="/" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="14" author="banner" >
+        <sqlFile path="setup/sqlserver/ddl-compile.sql" encoding="UTF-8" endDelimiter="/" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="15" author="banner" >
+        <sqlFile path="estructura/${bannerLiquibaseEnvironment}/ddl-01-types.sql" encoding="UTF-8" endDelimiter="/" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet-->
+    
+    <!-- changeSet id="16" author="banner" >
+        <sqlFile path="estructura/${bannerLiquibaseEnvironment}/ddl-02-inicial.sql" encoding="UTF-8" endDelimiter="/" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet-->
+    
+    <!--changeSet id="17" author="banner" >
+        <sqlFile path="estructura/${bannerLiquibaseEnvironment}/ddl-03-trigger.sql" encoding="UTF-8" endDelimiter="/" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+   <changeSet id="18" author="banner" >
+        <sqlFile path="estructura/${bannerLiquibaseEnvironment}/ddl-04-constraints.sql" encoding="UTF-8" endDelimiter="/" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="19" author="banner" >
+        <sqlFile path="estructura/${bannerLiquibaseEnvironment}/ddl-05-functions.sql" encoding="UTF-8" endDelimiter="/" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="20" author="banner" >
+        <sqlFile path="estructura/${bannerLiquibaseEnvironment}/ddl-06-procedure.sql" encoding="UTF-8" endDelimiter="/" stripComments="true" relativeToChangelogFile="true"/>
+    </changeSet-->
+    
+    <include file="estructura/${bannerLiquibaseEnvironment}/ddl-07-deltas.xml" relativeToChangelogFile="true"/>
+    
+    <include file="ddl-Carga.xml" relativeToChangelogFile="true"/>
+    
+    <changeSet id="21" author="banner">
+        <sqlFile path="datos/${bannerLiquibaseEnvironment}/dataThemes.sql" encoding="UTF-8" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="22" author="banner">
+        <sqlFile path="datos/${bannerLiquibaseEnvironment}/dataIcons.sql" encoding="UTF-8" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="23" author="banner">
+        <sqlFile path="datos/${bannerLiquibaseEnvironment}/dataVwIconList.sql" encoding="UTF-8" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <changeSet id="24" author="banner">
+		<sql>
+			insert into FWK_CADENA_IDIOMA (ID_IDIOMA, CLAVE, VALOR) values(1,'GENERAL.INFORMACION.CLASIFICA','Interno');
+			insert into FWK_CADENA_IDIOMA (ID_IDIOMA, CLAVE, VALOR) values(2,'GENERAL.INFORMACION.CLASIFICA','Interno');
+			insert into FWK_CADENA_IDIOMA (ID_IDIOMA, CLAVE, VALOR) values(3,'GENERAL.INFORMACION.CLASIFICA','Interno');
+		</sql>
+	</changeSet>
+    
+    <changeSet id="25" author="banner" runAlways="true" runOnChange="true">
+        <sql>
+            <![CDATA[
+				UPDATE FWK_CADENA_IDIOMA SET VALOR = 'Interno' WHERE CLAVE = 'GENERAL.INFORMACION.CLASIFICA';
+            	
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'https://localhost' 							WHERE KEY_VALUE = 'rutas.Sistema';
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'https://localhost/banner-files/' 				WHERE KEY_VALUE = 'rutas.Estaticos';
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'https://localhost/banner-reportes/' 			WHERE KEY_VALUE = 'rutas.Reportes';
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'https://localhost/banner-files/' 				WHERE KEY_VALUE = 'rutas.Estaticos.Reportes';
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'https://localhost/banner-files/resource/' 	WHERE KEY_VALUE = 'msg.pathToResources';
+				UPDATE FWK_CAT_CONTENT set VALUE = 'banner_dev@vw.com.mx' 						WHERE KEY_VALUE = 'mail.smtp.fromMail';
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'https://localhost' 							WHERE KEY_VALUE = 'acceso.UsuarioPruebas.iplocal';
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'https://ipservidor/pkmslogout.html?filename=bannerlogout.html'		WHERE KEY_VALUE = 'rutas.ExitRedirect';
+				
+				UPDATE FWK_CAT_CONTENT SET VALUE = '26' 			WHERE KEY_VALUE = 'mail.smtp.port';
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'localhost' 		WHERE KEY_VALUE = 'mail.smtp.host';
+            ]]>
+        </sql>
+    </changeSet>
+    
+
+</databaseChangeLog>

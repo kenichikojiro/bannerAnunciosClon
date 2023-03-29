@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" version="7">
+  <display-name>banner-ear</display-name>
+  <module>
+    <java>fwk-core.jar</java>
+  </module>
+  <module>
+    <java>fwk-mail.jar</java>
+  </module>
+  <module>
+    <java>baseApp-api.jar</java>
+  </module>
+  <module>
+    <java>baseApp-persistence.jar</java>
+  </module>
+  <module>
+    <java>baseApp-core.jar</java>
+  </module>
+  <module>
+    <java>baseApp-timer.jar</java>
+  </module>
+  <module>
+    <java>banner-core.jar</java>
+  </module>
+  <module>
+    <java>banner-api.jar</java>
+  </module>
+  <module>
+    <java>banner-timer.jar</java>
+  </module>
+  <module>
+    <java>banner-persistence.jar</java>
+  </module>
+  <module>
+    <web>
+      <web-uri>banner-web.war</web-uri>
+      <context-root>/banner-web</context-root>
+    </web>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

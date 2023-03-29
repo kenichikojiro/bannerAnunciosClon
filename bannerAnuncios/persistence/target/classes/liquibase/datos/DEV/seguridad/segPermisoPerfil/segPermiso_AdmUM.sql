@@ -1,0 +1,17 @@
+IDPERFIL^IDPERMISO
+#--Creación de SegPermisoPerfil - Perfil UM
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_MAIN')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'MANUAL_USR_4_UM')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_ADMINISTRACION')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_CONFIGURA')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERFIL')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERFIL_DELETE')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERFIL_INSERT')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERFIL_PERMISO')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERFIL_UPDATE')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERMISO')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERMISO_ASIGNAR')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERMISO_DELETE')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERMISO_INSERT')
+(select id from SEG_PERFIL where PERFIL = 'BANNER_UM')^(select ID from SEG_PERMISO WHERE permiso = 'BASEAPP_SEGURIDAD_PERMISO_UPDATE')

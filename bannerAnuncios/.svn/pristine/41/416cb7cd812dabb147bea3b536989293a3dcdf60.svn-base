@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio -->
+<jasperTemplate xmlns="http://jasperreports.sourceforge.net/jasperreports/template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/template http://jasperreports.sourceforge.net/xsd/jaspertemplate.xsd">
+	<style name="vw-Primario_blue" forecolor="#0000FF"/>
+	<style name="vw-Primario_white" forecolor="#FFFFFF"/>
+	<style name="vw-Primario_gray" forecolor="#BBC2C5"/>
+	<style name="vw-gray1" forecolor="#EAEEED"/>
+	<style name="vw-gray2" forecolor="#CFD7D9"/>
+	<style name="vw-gray3" forecolor="#8994A0"/>
+	<style name="vw-gray4" forecolor="#33434C"/>
+	<style name="vw-blue1" forecolor="#73B1DD"/>
+	<style name="vw-blue2" forecolor="#00B1EB"/>
+	<style name="vw-blue3" forecolor="#2274AC"/>
+	<style name="vw-blue4" forecolor="#003C65"/>
+	<style name="vw-green1" forecolor="#B9C900"/>
+	<style name="vw-green2" forecolor="#51AE30"/>
+	<style name="vw-green3" forecolor="#005D4D"/>
+	<style name="vw-green4" forecolor="#00413C"/>
+	<style name="vw-red1" forecolor="#EA4F44"/>
+	<style name="vw-red2" forecolor="#E4002C"/>
+	<style name="vw-red3" forecolor="#C82D20"/>
+	<style name="vw-red4" forecolor="#730019"/>
+	<style name="vw-yellow1" forecolor="#FFD100"/>
+	<style name="vw-yellow2" forecolor="#FAAA00"/>
+	<style name="vw-yellow3" forecolor="#FF871F"/>
+	<style name="vw-yellow4" forecolor="#8C5A28"/>
+	<style name="Image" hImageAlign="Center" vImageAlign="Middle"/>
+	<style name="Normal" style="vw-blue3" hTextAlign="Left" vTextAlign="Middle" vImageAlign="Middle" fontSize="10"/>
+	<style name="TituloSistema" style="Normal" hTextAlign="Center" fontSize="22" isBold="true"/>
+	<style name="TituloReporte" style="Normal" vTextAlign="Bottom" fontSize="26"/>
+	<style name="Footer" style="Normal" fontSize="8"/>
+	<style name="Titulo1" style="Normal" fontSize="14" isBold="true"/>
+	<style name="Titulo2" style="Normal" fontSize="12" isBold="true"/>
+	<style name="Titulo3" style="Normal" fontSize="10" isBold="true"/>
+	<style name="ColumnHeader" style="Normal" mode="Opaque" forecolor="#000000" backcolor="#CFD7D9" isBold="true">
+		<pen lineColor="#000000"/>
+		<box>
+			<pen lineWidth="0.75" lineColor="#000000"/>
+			<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="ColumnData" style="Normal" mode="Opaque" forecolor="#000000" isBlankWhenNull="true" fontSize="9">
+		<pen lineColor="#000000"/>
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#EFEFEF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+</jasperTemplate>

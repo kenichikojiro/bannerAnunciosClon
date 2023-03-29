@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm orm_2_1.xsd"
+    version="2.1">
+    
+    <!-- Se requiere cambio en estrategia por omision es AUTO y SQLServer emplea IDENTITY -->
+    <package>mx.vw.fwk.core.db</package>
+    
+      <entity class="mx.vw.fwk.core.model.FwkAccesoUsr" name="FwkAccesoUsr"><attributes><id name="idAcceso"><column name="ID_ACCESO"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.fwk.core.model.FwkCatApps" name="FwkCatApps"><attributes><id name="id"><column name="ID_APP"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.fwk.core.model.FwkCatAdmin" name="FwkCatAdmin"><attributes><id name="id"><column name="ID_ADMIN"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.fwk.core.model.FwkCatContent" name="FwkCatContent"><attributes><id name="id"><column name="ID_CONTENT"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.fwk.core.model.FwkCorreoTemplate" name="FwkCorreoTemplate"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.fwk.core.model.FwkDbtracer" name="FwkDbtracer" ><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.fwk.core.model.FwkIdioma" name="FwkIdioma" ><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.fwk.core.model.FwkCadenaIdioma" name="FwkCadenaIdioma"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <!-- <entity class="mx.vw.fwk.core.model.FwkPreferenciasUsr" name="FwkPreferenciasUsr" ><attributes><id name="idNumControl"><column name="ID_NUM_CONTROL"/><generated-value strategy="identity" /></id> </attributes></entity> -->
+	  <entity class="mx.vw.fwk.core.db.FwkCorreoPend"><attributes><id name="id"><column name="ID"/><generated-value strategy="IDENTITY"/></id></attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.FwkTinyUrl" name="FwkTinyUrl"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <!-- entity class="mx.vw.swf.baseapp.persistencia.modelo.SegPerfil" name="SegPerfil"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity -->
+	  <!--  entity class="mx.vw.swf.baseapp.persistencia.modelo.SegPermiso" name="SegPermiso"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity-->
+	  <mapped-superclass class="mx.vw.swf.baseapp.persistencia.modelo.AbstractSegPerfil">
+	  	<attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes>
+    	<entity class="mx.vw.swf.baseapp.persistencia.modelo.SegPerfil"/>
+	  </mapped-superclass>
+	  <mapped-superclass class="mx.vw.swf.baseapp.persistencia.modelo.AbstractSegPermiso">
+	  	<attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes>
+    	<entity class="mx.vw.swf.baseapp.persistencia.modelo.SegPermiso"/>
+	  </mapped-superclass>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.CmAgrupador" name="CmAgrupador"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.CmDocumentoBytes" name="CmDocumentoBytes"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.CmDocumentoComentario" name="CmDocumentoComentario"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.CmTipoMime" name="CmTipoMime"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.FwkAuditoriaReportes" name="FwkAuditoriaReportes"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.FwkCalendarioReportes" name="FwkCalendarioReportes"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.FwkCatalogoPantallas" name="FwkCatalogoPantallas"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.FwkCatalogoReportes" name="FwkCatalogoReportes"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.FwkCatalogoTipoExportacion" name="FwkCatalogoTipoExportacion"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.FwkReportePantalla" name="FwkReportePantalla"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.persistencia.modelo.SegVacationMode" name="SegVacationMode"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.logging.AppLog" name="AppLog"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.logging.LogMessageDetail" name="LogMessageDetail"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+	  <entity class="mx.vw.swf.baseapp.logging.RevInfo" name="RevInfo"><attributes><id name="id"><column name="ID"/><generated-value strategy="identity" /></id> </attributes></entity>
+
+	  <!-- Notificaciones -->
+    
+</entity-mappings>

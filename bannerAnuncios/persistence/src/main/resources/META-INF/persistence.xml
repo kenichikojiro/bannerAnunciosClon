@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+			version="2.1">
+		
+	<persistence-unit name="bannerPU" transaction-type="JTA">
+		<provider>${bannerPersistenceProvider}</provider>
+		<jta-data-source>${bannerPersistenceDataSource}</jta-data-source>
+		
+		<mapping-file>META-INF/${liquibaseDBprovider}-orm.xml</mapping-file>
+		<!-- Permite mapear entidades del framework como objetos relacionados a las entidades del sistema -->
+		<jar-file>fwk-core.jar</jar-file>
+		<jar-file>fwk-mail.jar</jar-file>
+        <jar-file>baseApp-persistence.jar</jar-file>
+
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+		<properties>
+			<property name="wildfly.jpa.default-unit" value="true"/>
+			<property name="hibernate.generate_statistics" value="${bannerPersistenceGenStats}"/> 
+			<property name="hibernate.dialect" value="${bannerPersistenceDialect}" />
+			<property name="hibernate.format_sql" value="${bannerPersistenceFormatSQL}"  />
+            <property name="hibernate.use_sql_comments" value="${bannerPersistenceUseCommentsSQL}" />
+
+			<!-- Properties for Hibernate -->
+			<property name="hibernate.connection.defaultNChar" value="${bannerPersistenceDefaultNChar}" /> 
+			<property name="hibernate.connection.useUnicode" value="${bannerPersistenceUseUniCode}" />
+            <property name="hibernate.connection.characterEncoding" value="${bannerPersistenceCharEncode}" />
+            <property name="hibernate.connection.charSet" value="${bannerPersistenceCharSet}" /> 
+            <property name="hibernate.id.new_generator_mappings" value="${bannerPersistenceGenMapping}" />
+            
+	        <property name="hibernate.integration.envers.enabled" value="true"/>
+	        <property name="org.hibernate.envers.audit_strategy"
+                      value="mx.vw.swf.baseapp.logging.hibernate.OneTableJMSThreadSpawned"/>
+            <property name="org.hibernate.envers.revision_on_collection_change" value="false"/>
+	        <property name="hibernate.show_sql" value="false"/>
+		</properties>
+	</persistence-unit>
+	
+	<persistence-unit name="envers" transaction-type="JTA">
+	    <non-jta-data-source>java:jboss/datasources/AppLogDS</non-jta-data-source>
+	    <mapping-file>META-INF/${liquibaseDBprovider}Log-orm.xml</mapping-file>
+	    <class>mx.vw.swf.baseapp.logging.AppLog</class>
+	    <class>mx.vw.swf.baseapp.logging.LogMessageDetail</class>
+	    <class>mx.vw.swf.baseapp.logging.RevInfo</class>
+	    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+	    <properties>
+	        <!-- Properties for Hibernate -->
+	        <property name="hibernate.integration.envers.enabled" value="false"/>
+	        <property name="hibernate.show_sql" value="true"/>
+	        <property name="hibernate.dialect" value="${bannerPersistenceDialect}"/>
+	        <property name="hibernate.jdbc.batch_size" value="100"/>
+	    </properties>
+	</persistence-unit>
+		
+		
+</persistence>

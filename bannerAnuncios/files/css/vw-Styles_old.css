@@ -1,0 +1,311 @@
+@charset "ISO-8859-1";
+
+/* Estilos de acuerdo a la imagen corporativa */
+.vw-primario.vw-blue { color: #0000FF; }
+.vw-primario.vw-white { color: #FFFFFF; }
+.vw-primario.vw-gray { color: #BBC2C5; }
+
+.vw-gray1 { color: #EAEEED; }
+.vw-gray2 { color: #CFD7D9; }
+.vw-gray3 { color: #8994A0; }
+.vw-gray4 { color: #33434C; }
+
+.vw-blue1 { color: #73B1DD; }
+.vw-blue2 { color: #00B1EB; }
+.vw-blue3 { color: #2274AC; }
+.vw-blue4 { color: #003C65; }
+
+.vw-green1 { color: #B9C900; }
+.vw-green2 { color: #51AE30; }
+.vw-green3 { color: #005D4D; }
+.vw-green4 { color: #00413C; }
+
+.vw-red1 { color: #EA4F44; }
+.vw-red2 { color: #E4002C; }
+.vw-red3 { color: #C82D20; }
+.vw-red4 { color: #730019; }
+
+.vw-yellow1 { color: #FFD100; }
+.vw-yellow2 { color: #FAAA00; }
+.vw-yellow3 { color: #FF871F; }
+.vw-yellow4 { color: #8C5A28; }
+
+.vw-icon::before { display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+  font-weight: 900;
+}
+
+.vw-icon-demo::before { display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+  font-weight: 900;
+  font-size: 3em;
+}
+
+/* .vw-icon.solid { font-weight: 900; }
+.vw-icon.brand { font-weight: 400; }
+.vw-icon.regular { font-weight: 400; }
+.vw-icon.light { font-weight: 300; } */
+
+@keyframes spin { 
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
+}
+
+@keyframes bounce {
+  0%  { -webkit-transform:translateY(0); transform: translateY(0); }
+  40% { -webkit-transform:translateY(-5px); transform: translateY(-5px); }
+  60%, 100% { -webkit-transform: translateY(-5px); transform: translateY(-5px); }
+}
+
+@keyframes bounceneg {
+  0%  { -webkit-transform:translateY(0); transform: translateY(0); }
+  40% { -webkit-transform:translateY(5px); transform: translateY(5px); }
+  60%, 100% { -webkit-transform: translateY(5px); transform: translateY(5px); }
+}
+
+.caretLeft::before   { content: "\f0d9"; color: #00B1EB; font-size: 3em; !important}
+.caretLeft:hover:before { color: #2274AC; !important}
+.caretRight::before   { content: "\f0da"; color: #00B1EB; font-size: 3em; !important}
+.caretRight:hover:before { color: #2274AC; !important}
+.caretUp::before   { content: "\f0d8"; color: #00B1EB; font-size: 3em; !important}
+.caretUp:hover:before { color: #2274AC; !important}
+.caretDown::before   { content: "\f0d7"; color: #00B1EB; font-size: 3em; !important}
+.caretDown:hover:before { color: #2274AC; !important}
+.gear::before   { content: "\f013"; color: #00B1EB; font-size: 2em; !important}
+.gear:hover:before { color: #2274AC; animation: spin 3s infinite; !important}
+.caretUpBig::before   { content: "\f0d8"; color: #00B1EB; font-size: 4em; !important}
+.caretUpBig:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.caretDownBig::before   { content: "\f0d7"; color: #00B1EB; font-size: 4em; !important}
+.caretDownBig:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+
+.help::before   { content: "\f059"; color: #00B1EB; font-size: 3em; font-weight: 400; !important}
+.help:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.logout::before   { content: "\f2f5"; color: #00B1EB; font-size: 3em; !important}
+.logout:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.sync::before   { content: "\f021"; color: #00B1EB; font-size: 3em; !important}
+.sync:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.add::before    { content: "\f067"; color: #51AE30; font-size: 3em; !important}
+.add:hover:before { color: #005D4D; animation: bounce 1s alternate; !important}
+.editBig::before  { content: "\f044"; color: #00B1EB; font-size: 3em; !important}
+.editBig:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.save::before   { content: "\f0c7"; color: #51AE30; font-size: 3em; !important}
+.save:hover:before { color: #005D4D; animation: bounce 1s alternate; !important}
+.accept::before { content: "\f00c"; color: #51AE30; font-size: 3em; !important}
+.accept:hover:before { color: #005D4D; animation: bounce 1s alternate; !important}
+.cancel::before { content: "\f05e"; color: #E4002C; font-size: 3em; !important}
+.cancel:hover:before   { color: #C82D20; animation: bounce 1s alternate; !important}
+.deactivateBig::before { content: "\f057"; color: #00B1EB; font-size: 3em; font-weight: 400; !important}
+.deactivateBig:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.export::before { content: "\f019"; color: #00B1EB; font-size: 3em; !important}
+.export:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.columns::before { content: "\f0db"; color: #00B1EB; font-size: 3em; height: 105%; !important}
+.columns:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.copy::before { content: "\f0c5"; color: #00B1EB; font-size: 1em; !important}
+.copy:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.paste::before { content: "\f0ea"; color: #00B1EB; font-size: 1em; !important}
+.paste:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.images::before { content: "\f302"; color: #00B1EB; font-size: 2em; !important}
+.images:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.ban::before { content: "\f00d"; color: #E4002C; font-size: 3em; !important}
+.ban:hover:before   { color: #C82D20; animation: bounce 1s alternate; !important}
+.exchange-alt::before   { content: "\f362"; color: #51AE30; font-size: 3em; !important}
+.exchange-alt:hover:before { color: #005D4D; animation: bounce 1s alternate; !important}
+.buttonRed::before   { content: "\f111"; color: #FE2B45; font-size: 3em; !important}
+.buttonGrey::before   { content: "\f111"; color: #99A3A4; font-size: 3em; !important}
+.buttonYellow::before   { content: "\f111"; color: #FFFE07; font-size: 3em; !important}
+.buttonBlue::before   { content: "\f111"; color: #076FFF; font-size: 3em; !important}
+.buttonGreen::before   { content: "\f111"; color: #05C310; font-size: 3em; !important}
+
+.check::before   { content: "\f46c"; color: #FE2B45; font-size: 3em; !important}
+
+.approveWithoutError::before   { content: "\f164"; color: #05C310; font-size: 3em; !important}
+.approveWithError::before   { content: "\f164"; color: #FE2B45; font-size: 3em; !important}
+
+
+
+.multiasignacion::before    { content: "\f0ae"; color: #00B1EB; font-size: 3em; !important}
+.multiasignacion:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+
+.addMenu::before    { content: "\f067"; color: #00B1EB; font-size: 2em; !important}
+.addMenu:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.removeMenu::before    { content: "\f068"; color: #00B1EB; font-size: 2em; !important}
+.removeMenu:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+
+.fa-arrow-right::before   { content: "\f061"; color: #51AE30; font-size: 3em; !important}
+.fa-arrow-right:hover:before { color: #005D4D; animation: bounce 1s alternate; !important}
+
+.spider::before        { content: "\f717"; color: #E4002C; font-size: 2em; !important}
+.spider:hover:before   { color: #C82D20; animation: bounce 1s alternate; !important}
+.comment-dots::before  { content: "\f4ad"; color: #00B1EB; font-size: 2em; !important}
+.comment-dots:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.comments::before      { content: "\f086"; color: #00B1EB; font-size: 2em; !important}
+.comments:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.user::before          { content: "\f007"; color: #00B1EB; font-size: 2em; !important}
+.user:hover:before     { color: #2274AC; animation: bounce 1s alternate; !important}
+
+.warn::before  { content: "\f071"; color: #FFD100; font-size: 5em; !important}
+.warn:hover:before  { color: #FAAA00; !important}
+.info::before  { content: "\f06a"; color: #2274AC; font-size: 5em; !important}
+.info:hover:before  { color: #003C65; !important}
+.newinfo::before  { content: "\f05a"; color: #2274AC; font-size: 3em; !important}
+.newinfo:hover:before  { color: #003C65; !important}
+.error::before { content: "\f06a"; color: #E4002C; font-size: 5em; !important}
+.error:hover:before  { color: #C82D20; !important}
+
+.newinfomin::before  { content: "\f05a"; color: #2274AC; font-size: 2em; !important}
+.newinfomin:hover:before  { color: #003C65; !important}
+
+.excel::before { content: "\f1c3"; color: #51AE30; font-size: 3em; !important}
+.excel:hover:before { color: #005D4D; animation: bounce 1s alternate; !important}
+.pdf::before   { content: "\f1c1"; color: #C82D20; font-size: 3em; !important}
+.pdf:hover:before { color: #730019; animation: bounce 1s alternate; !important}
+.csv::before   { content: "\f6dd"; color: #00B1EB; font-size: 3em; !important}
+.csv:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.xml::before   { content: "\f1c9"; color: #00B1EB; font-size: 3em; !important}
+.xml:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.print::before { content: "\f02f"; color: #00B1EB; font-size: 3em; !important}
+.print:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.file::before  { content: "\f15b"; color: #00B1EB; font-size: 3em; !important}
+.file:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.preview::before { content: "\f15b"; color: #00B1EB; font-size: 3.0em; font-weight: 400; !important}
+.preview:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.preview::after  { content: "\f002"; color: #00B1EB; font-size: 1.5em; font-weight: 900; font-family: "Font Awesome 5 Free"; position: relative; left: -1.3em; top: -0.15em; !important}
+.preview:hover:after { color: #2274AC; animation: bounce 1s alternate; !important}
+
+.fa-stack.fa-lg.animated:hover { animation: bounce 1s alternate; !important }
+  
+.fileDownload::before { content: "\f56d"; color: #00B1EB; font-size: 3em; !important}
+.fileDownload:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.fileUpload::before   { content: "\f574"; color: #00B1EB; font-size: 3em; !important}
+.fileUpload:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+
+.edit::before       { content: "\f044"; color: #00B1EB; font-size: 2em; !important}
+.edit:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.activate::before   { content: "\f058"; color: #00B1EB; font-size: 2em; font-weight: 400; !important}
+.activate:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.deactivate::before { content: "\f057"; color: #00B1EB; font-size: 2em; font-weight: 400; !important}
+.deactivate:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.disabledPerson::before { content: "\f007"; color: #00B1EB; font-size: 2em; font-weight: 400; !important}
+.disabledPerson:hover:before { color: #2274AC; !important}
+.download::before   { content: "\f019"; color: #00B1EB; font-size: 2em; !important}
+.download:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.upload::before   { content: "\f093"; color: #00B1EB; font-size: 2em; !important}
+.upload:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.search::before     { content: "\f002"; color: #00B1EB; font-size: 2em; !important}
+.search:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.flag::before       { content: "\f024"; color: #00B1EB; font-size: 2em; font-weight: 400; !important}
+.flag:hover:before  { color: #2274AC; font-weight: 900; animation: bounce 1s alternate; !important}
+.approve::before      { content: "\f164"; color: #51AE30; font-size: 3em; font-weight: 400; !important}
+.approve:hover:before { color: #005D4D; font-weight: 900; animation: bounce 1s alternate; !important}
+.play::before   { content: "\f04b"; color: #00B1EB; font-size: 3em; !important}
+.play:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.reject::before     { content: "\f165"; color: #C82D20; font-size: 3em; font-weight: 400; !important}
+.reject:hover:before { color: #730019; font-weight: 900; animation: bounceneg 1s alternate; !important}
+.clean::before      { content: "\f12d"; color: #00B1EB; font-size: 2em; !important}
+.clean:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.delete::before     { content: "\f2ed"; color: #00B1EB; font-size: 3em; !important}
+.delete:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.userReview::before     { content: "\f4fc"; color: #00B1EB; font-size: 2em; !important}
+.userReview:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.review::before       { content: "\f06e"; color: #00B1EB; font-size: 2em; !important}
+.review:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.disable::before { content: "\f0ae"; color: #00B1EB; font-size: 3.0em; font-weight: 900; opacity: 0.9; !important}
+.disable::after  { content: "\f05e"; color: #C82D20; font-size: 1.5em; font-weight: 900; font-family: "Font Awesome 5 Free"; position: relative; left: -1.3em; top: -0.15em;  opacity: 0.4; !important}
+.configs::before       { content: "\f201"; color: #00B1EB; font-size: 3em; !important}
+.configs:hover:before { color: #2274AC; animation: bounce 1s alternate; !important}
+.send::before     { content: "\f674"; color: #00B1EB; font-size: 3em; !important}
+.send:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.searchDollar::before     { content: "\f688"; color: #00B1EB; font-size: 2em; !important}
+.searchDollar:hover:before  { color: #730019; animation: bounce 1s alternate; !important}
+.lock::before     { content: "\f023"; color: #C82D20; font-size: 2em; !important}
+.lock:hover:before  { color: #730019; animation: bounce 1s alternate; !important}
+.unlock::before     { content: "\f09c"; color: #51AE30; font-size: 2em; !important}
+.unlock:hover:before  { color: #005D4D; animation: bounce 1s alternate; !important}
+
+/*Iconos específicos del sistema */
+.freeze::before     { content: "\f2dc"; color: #89e2ff; font-size: 2em; !important}
+.freeze:hover:before  { color: #00B1EB; animation: bounce 1s alternate; !important}
+.back::before     { content: "\f060"; color: #C82D20; font-size: 3em; !important}
+.back:hover:before  { color: #730019; animation: bounce 1s alternate; !important}
+.calculate::before     { content: "\f1ec"; color: #00B1EB; font-size: 3em; !important}
+.calculate:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.history::before     { content: "\f1da"; color: #00B1EB; font-size: 3em; !important}
+.history:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.cogs::before     { content: "\f085"; color: #00B1EB; font-size: 3em; !important}
+.cogs:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.backup::before     { content: "\f0a0"; color: #00B1EB; font-size: 3em; !important}
+.backup:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.dollar::before     { content: "\f155"; color: #51AE30; font-size: 3em; !important}
+.dollar:hover:before  { color: #005D4D; animation: bounce 1s alternate; !important}
+.euro::before     { content: "\f153"; color: #00B1EB; font-size: 3em; !important}
+.euro:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.home::before     { content: "\f015"; color: #00B1EB; font-size: 3em; !important}
+.home:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.database::before     { content: "\f1c0"; color: #00B1EB; font-size: 3em; !important}
+.database:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.target::before     { content: "\f140"; color: #00B1EB; font-size: 3em; !important}
+.target:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.fire::before     { content: "\f7e4"; color: #C82D20; font-size: 3.1em; !important}
+.fire:hover:before  { color: #730019; animation: bounce 1s alternate; !important}
+.tools::before     { content: "\f7d9"; color: #C82D20; font-size: 3em; !important}
+.tools:hover:before  { color: #730019; animation: bounce 1s alternate; !important}
+.login::before { content: "\f2f6"; color: #00B1EB; font-size: 3em; !important }
+.login:hover:before { color: #2274AC; animation: bounce 1s alternate; !important }
+.login::before { content: "\f2f6"; color: #00B1EB; font-size: 3em; !important }
+.login:hover:before { color: #2274AC; animation: bounce 1s alternate; !important }
+.folder::before { content: "\f07c"; color: #00B1EB; font-size: 2em; !important }
+.folder:hover:before { color: #2274AC; animation: bounce 1s alternate; !important }
+
+.billete::before     { content: "\f3d1"; color: #89e2ff; font-size: 2em; !important}
+.billete:hover:before  { color: #00B1EB; animation: bounce 1s alternate; !important}
+.monedas::before     { content: "\f51e"; color: #89e2ff; font-size: 2em; !important}
+.monedas:hover:before  { color: #00B1EB; animation: bounce 1s alternate; !important}
+.notEqual::before     { content: "\f53e"; color: #00B1EB; font-size: 3em; !important}
+.notEqual:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.llave::before     { content: "\f0ad"; color: #89e2ff; font-size: 2em; !important}
+.llave:hover:before  { color: #00B1EB; animation: bounce 1s alternate; !important}
+.auto::before     { content: "\f1b9"; color: #00B1EB; font-size: 2em; !important}
+.auto:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.america::before     { content: "\f57d"; color: #89e2ff; font-size: 2em; !important}
+.america:hover:before  { color: #00B1EB; animation: bounce 1s alternate; !important}
+.truncate::before     { content: "\f141"; color: #00B1EB; font-size: 1em; !important}
+.truncate:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+.run::before     { content: "\f144"; color: #00B1EB; font-size: 2em; !important}
+.run:hover:before  { color: #2274AC; animation: bounce 1s alternate; !important}
+
+/*Estilos que aplican a los elementos definidos como botones de font awesome */
+.icon-panel { border: 0px; text-align:center; margin-top: -4px; margin-left: -8px; margin-right:0px; margin-bottom: -4px; padding: 0px 0px; background-color: transparent; !important; }
+.icon-panel tbody tr.ui-widget-content td.ui-panelgrid-cell.icon-column.gridAlignRight { width: 100%; float:right; background-color: transparent; !important;}
+.ui-panelgrid.ui-widget.panelGridNoBorder.icon-panel.grid100.gridAlignCenter { width: 100%; text-align:center; !important;}
+.panelGridNoBorder.ui-panelgrid > * > tr, .panelGridNoBorder.ui-panelgrid .ui-panelgrid-cell { background-color: transparent; !important }
+.icon-column { border: 0px; text-align:center; margin-top: 0px; margin-left: 0px; margin-right:0px; margin-bottom: 0px; padding: 0px 0px; !important; }
+.ui-panelgrid.ui-widget.panelGridNoBorder.icon-panel { width: auto; !important }
+
+.icon-label, .icon-labelHeader { text-align:center; margin-top: 0px; margin-bottom: 0px; margin-left: 5px; margin-right:0px; display:block; font-weight: bold; }
+
+ /*css para cambiar iconos de las tablas editables*/
+.ui-datatable .ui-datatable-frozen-container .ui-row-editor {display: flex;flex-direction: row;justify-content: space-between;width: 100%;margin-top: 0;margin-bottom: 0;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-pencil {background: none !important;text-indent: initial;font-family: "Font Awesome 5 Free";font-style: normal;font-variant: normal;-webkit-font-smoothing: antialiased;font-weight: 900;width: 100%;height: 100%;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;transform: translate(0, 0);}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-pencil:before {content: "\f044";color: #00B1EB;font-size: 2em !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-pencil:hover {color: #2274AC;animation: bounce 1s alternate !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-check {background: none !important;text-indent: initial;font-family: "Font Awesome 5 Free";font-style: normal;font-variant: normal;-webkit-font-smoothing: antialiased;font-weight: 900;width: 100%;height: 100%;position: relative;z-index: 100;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;transform: translate(0, 0);z-index: 100;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-check:before {content: "\f00c";color: #51AE30;font-size: 2em !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-check:hover {color: #005D4D;text-decoration: none;animation: bounce 1s alternate !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-close {background: none !important;text-indent: initial;font-family: "Font Awesome 5 Free";font-style: normal;font-variant: normal;-webkit-font-smoothing: antialiased;font-weight: 900;width: 100%;height: 100%;position: relative;z-index: 100;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;transform: translate(0, 0);z-index: 100;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-close:before {content: "\f05e";color: #E4002C;font-size: 2em !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-close:hover {color: #C82D20;text-decoration: none;animation: bounce 1s alternate !important;}
+
+/*css para el componente de chips*/
+.ui-chips-input-token { width: 100%; }
+.ui-chips-input-token input[type=text] { width: 100%; border: none; background: none; }
+
+.datatable-options { font-size: 6px; padding: 0 5px; }
+.truncate-text-table { max-width: 80%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 11px; }

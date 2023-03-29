@@ -1,0 +1,2 @@
+ESTATUS^MOSTRARENMENU^PERMISO^DESCRIPCION
+#--Creación de SegPermiso para banner

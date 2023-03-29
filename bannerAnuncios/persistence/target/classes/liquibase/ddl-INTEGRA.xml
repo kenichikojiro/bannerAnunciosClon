@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+        		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        		http://www.liquibase.org/xml/ns/dbchangelog-ext 
+        		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"
+        logicalFilePath="ddl-INTEGRA.xml">
+
+    <changeSet id="25" author="dzmppdw">
+        <sql>
+        	<![CDATA[
+				update FWK_CAT_CONTENT SET value = 'http://10.148.10.195/banner-files/reportes' WHERE key_value = 'rutas.Reportes';
+				update FWK_CAT_CONTENT SET value = 'http://10.148.10.195/banner-files/' WHERE key_value = 'rutas.Estaticos.Reportes';
+				update FWK_CAT_CONTENT SET VALUE = 'http://10.148.10.195/banner-files/resource/' WHERE KEY_VALUE = 'msg.pathToResources';
+				UPDATE FWK_CAT_CONTENT SET VALUE = 'banner_integra@vw.com.mx' WHERE KEY_VALUE = 'mail.smtp.fromMail'   AND ID_APP = 3 AND ID_ADMIN = 4;
+				update FWK_CAT_CONTENT set VALUE = 'true' where KEY_VALUE = 'acceso.UsuarioPruebas.accesoMenuPruebas';
+			]]>				
+        </sql>
+    </changeSet>   
+
+    <!-- 
+    <changeSet id="1" author="banner">
+        <sqlFile path="src/main/resources/full.sql" stripComments="true" endDelimiter="/|;(.)*/" relativeToChangelogFile="true"/>
+    </changeSet>
+    -->
+    
+    <!--
+    <changeSet id="3" author="banner" >
+    	<createProcedure>
+            <![CDATA[
+            ]]>
+    	</createProcedure>
+    </changeSet>
+    -->
+
+</databaseChangeLog>

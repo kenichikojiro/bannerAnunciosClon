@@ -1,0 +1,32 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<html>
+	<head>
+		<title>Reportar Error en el Sistema</title>
+		<script type="text/javascript" src="DEBE_COLOCAR_EL_SCRIPT_OTORGADO_POR_JIRA_PARA_EL_COLECTOR_DE_INCIDECIAS_DE_SU_PROYECTO_SOLO_PRIMER_SCRIPT_USAR_NOMBRE_SERVER_NO_DIRECCION_IP"></script>
+
+		<script type="text/javascript">
+			window.ATL_JQ_PAGE_PROPS =  {
+				"triggerFunction": function(showCollectorDialog) {
+					//Requries that jQuery is available! 
+					jQuery("#feedback-button").click(function(e) {
+						e.preventDefault();
+						showCollectorDialog();
+					});
+				}
+			};
+			
+			$("document").ready(function() {
+				setTimeout(function() {
+					jQuery("#feedback-button").click();
+				},10);
+			});
+		</script>
+	</head>
+ 
+	<body>
+		<h2>Reporte de Erorres en el Sistema</h2>
+		<a href="#" id="feedback-button" class='btn btn-primary btn-large'>Reportar Error en el Sistema</a>
+	</body>
+</html>

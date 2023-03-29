@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+
+.swf-icon {
+	width: 130px;
+	height: 130px;
+	background-image: url("../img/VWIcons.png")
+}
+
+.ui-widget-content .swf-icon {
+	background-image: url("../img/VWIcons.png")
+}
+
+.ui-widget-header .swf-icon {
+	background-image: url("../img/VWIcons.png")
+}
+
+.ui-state-default .swf-icon {
+	background-image: url("../img/VWIcons.png")
+}
+
+.ui-state-hover .swf-icon, .ui-state-focus .swf-icon {
+	background-image: url("../img/VWIcons.png")
+}
+
+.ui-state-active .swf-icon {
+	background-image: url("../img/VWIcons.png")
+}
+
+.ui-state-highlight .swf-icon {
+	background-image: url("../img/VWIcons.png")
+}
+
+.ui-state-error .swf-icon, .ui-state-error-text .swf-icon {
+	background-image: url("../img/VWIcons.png")
+}
+
+.swf-icon-show-hide-menu {
+	background-image: url("../img/VWIconsSVG/Arrows.svg");
+}
+ 

@@ -1,0 +1,373 @@
+@charset "ISO-8859-1";
+
+/* Nueva Imagen SWF */
+
+/* Colores primarios */
+/* Botones, tablas de menu y desplegables, pestañas y solapas, globo notificaciones
+   Botones afirmativos, crear, aceptar, guardar, abrir, siguiente, si, aplicar, agregar, empezar */
+.vw-blue, .vw-graph-blue      { color: #215ACC; } 
+/* Botones negativos, cerrar, borrar cancelar, atras, no descartar, eliminar, terminar, soporte, cerrar sesion */
+.vw-petrol, .vw-graph-petrol, .vw-icon-petrol  { color: #004666; }
+.vw-icon-petrol:hover    { color: #215ACC; }
+/* Barra busqueda, opacidad 20%, titulos y textos resaltados, iconos sobre fondo gris claro y blanco, barra scroll opacidad 20% */
+.vw-gray-dark, .vw-graph-gray { color: #4C5356; }
+.vw-silver, .vw-graph-silver    { color: #A8ADB3; }
+.vw-gray      { color: #F2F2F2; }
+
+/* colores para graficas */
+.vw-graph-blue-dark    { color: #006384; }
+.vw-graph-petrol-ligth { color: #C6DFE7; }
+
+/* colores adicionales para graficas */
+.vw-graph-blue-1   { color: #538CFE; }
+.vw-graph-blue-2   { color: #85BEFF; }
+.vw-graph-blue-3   { color: #85BEFF; }
+.vw-graph-blue-4   { color: #B7EFFF; }
+.vw-graph-petrol-1 { color: #327898; }
+.vw-graph-petrol-2 { color: #64AACA; }
+.vw-graph-petrol-3 { color: #96DCFC; }
+.vw-graph-petrol-4 { color: #C8FFFF; }
+.vw-graph-gray-1   { color: #7e8588; }
+.vw-graph-gray-2   { color: #b0b7ba; }
+.vw-graph-gray-3   { color: #e2e9ec; }
+.vw-graph-blue-dark-1  { color: #3295b6; }
+.vw-graph-blue-dark-2  { color: #64c7e8; }
+.vw-graph-blue-dark-3  { color: #96faff; }
+
+/* Estilos de acuerdo a la imagen corporativa */
+.vw-primario.vw-blue  { color: #0000FF; }
+.vw-primario.vw-white { color: #FFFFFF; }
+.vw-primario.vw-gray  { color: #BBC2C5; }
+
+.vw-gray1 { color: #EAEEED; }
+.vw-gray2 { color: #CFD7D9; }
+.vw-gray3 { color: #8994A0; }
+.vw-gray4 { color: #33434C; }
+
+.vw-blue1 { color: #73B1DD; }
+.vw-blue2 { color: #00B1EB; }
+.vw-blue3 { color: #2274AC; }
+.vw-blue4 { color: #003C65; }
+
+.vw-green1 { color: #B9C900; }
+.vw-green2 { color: #51AE30; }
+.vw-green3 { color: #005D4D; }
+.vw-green4 { color: #00413C; }
+
+.vw-red1 { color: #EA4F44; }
+.vw-red2 { color: #E4002C; }
+.vw-red3 { color: #C82D20; }
+.vw-red4 { color: #730019; }
+
+.vw-yellow1 { color: #FFD100; }
+.vw-yellow2 { color: #FAAA00; }
+.vw-yellow3 { color: #FF871F; }
+.vw-yellow4 { color: #8C5A28; }
+
+.vw-icon-tiny   { font-size: 0.65em; }
+.vw-icon-small   { font-size: 0.75em; }
+.vw-icon-big     { font-size: 1.20em; }
+.vw-icon-veryBig { font-size: 2.50em; }
+
+.vw-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin { 
+    0% { -webkit-transform: rotate(0deg);   transform: rotate(0deg);   }
+  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
+}
+
+@keyframes bounce {
+    0% { -webkit-transform:translateY(0); transform: translateY(0);        }
+   40% { -webkit-transform:translateY(-5px); transform: translateY(-5px);  }
+   60%, 
+  100% { -webkit-transform: translateY(-5px); transform: translateY(-5px); }
+}
+
+@keyframes bounceneg {
+    0% { -webkit-transform:translateY(0); transform: translateY(0);      }
+   40% { -webkit-transform:translateY(5px); transform: translateY(5px);  }
+   60%, 
+  100% { -webkit-transform: translateY(5px); transform: translateY(5px); }
+}
+
+.vw-icon {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.vw-icon.vw-icon-small,
+.vw-icon.vw-icon-big {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.vw-icon.vw-icon-big.help {
+	margin-left: 5px;
+	font-size: 1.10em;
+}
+.vw-icon.vw-icon-big.vw-icon-devOps {
+	margin-left: 10px;
+	margin-top: 3px;
+	font-size: 0.8em;
+}
+
+.ui-row-editor .ui-icon-pencil, .ui-row-editor .ui-icon-check, .ui-row-editor .ui-icon-close,
+.vw-icon::before,
+.vw-icon-demo::before { 
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 900;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 2em;
+  color: #00B1EB;
+  
+  /*background: none;text-indent: initial;width: 100%;height: 100%;transform: translate(0, 0);*/
+  /*background: none;text-indent: initial;width: 100%;height: 100%;position: relative;z-index: 100;transform: translate(0, 0);*/
+  /*background: none;text-indent: initial;width: 100%;height: 100%;position: relative;z-index: 100;transform: translate(0, 0);*/
+}
+
+.vw-icon:hover:before,
+.vw-icon-demo:hover:before,
+.fa-stack.fa-lg.animated:hover { animation: bounce 1s alternate; !important }
+
+.vw-icon:hover:before,
+.vw-icon-demo:hover:before { color: #2274AC; !important}
+
+/* Botones con color base */
+.caretLeft::before   	{ content: "\f0d9"; !important }
+.caretRight::before   	{ content: "\f0da"; !important }
+.caretUp::before   		{ content: "\f0d8"; !important }
+.caretDown::before   	{ content: "\f0d7"; !important }
+.gear::before   		{ content: "\f013"; !important }
+.gear:hover:before 		{ animation: spin 3s infinite; !important }
+.hourStop::before   	{ content: "\f252"; !important }
+.hourStart::before   	{ content: "\f252"; animation: spin 5s infinite; color: #E4002C; !important }
+.hourStart:hover:before { content: "\f252"; animation: spin 5s infinite; color: #E4002C; !important }
+.caretUpBig::before   	{ content: "\f0d8"; !important }
+.caretDownBig::before   { content: "\f0d7"; !important }
+.help::before   		{ content: "\f059"; font-weight: 400; !important }
+.sync::before   		{ content: "\f021"; !important }
+.editBig::before  		{ content: "\f044"; !important }
+.export::before 		{ content: "\f019"; !important }
+.columns::before 		{ content: "\f0db"; !important }
+.copy::before 			{ content: "\f0c5"; !important }
+.paste::before 			{ content: "\f0ea"; !important }
+.images::before 		{ content: "\f302"; !important }
+.comment-dots::before  	{ content: "\f4ad"; !important }
+.comments::before      	{ content: "\f086"; !important }
+.user::before          	{ content: "\f007"; !important }
+.info::before  			{ content: "\f06a"; !important }
+.newinfo::before  		{ content: "\f05a"; !important }
+.fileDownload::before 	{ content: "\f56d"; !important }
+.fileUpload::before   	{ content: "\f574"; !important }
+.edit::before       	{ content: "\f044"; !important }
+.activate::before   	{ content: "\f058"; font-weight: 400; !important }
+.deactivate::before 	{ content: "\f057"; font-weight: 400; !important }
+.disabledPerson::before { content: "\f007"; font-weight: 400; !important }
+.download::before   	{ content: "\f019"; !important }
+.upload::before   		{ content: "\f093"; !important }
+.search::before     	{ content: "\f002"; !important }
+.flag::before       	{ content: "\f024"; font-weight: 400; !important }
+.flag:hover:before  	{ font-weight: 900; !important }
+.addMenu::before    	{ content: "\f067"; !important }
+.removeMenu::before    	{ content: "\f068"; !important }
+.clean::before      	{ content: "\f12d"; !important }
+.delete::before     	{ content: "\f2ed"; !important }
+.userReview::before     { content: "\f4fc"; !important }
+.review::before       	{ content: "\f06e"; !important }
+.configs::before		{ content: "\f201"; !important }
+.send::before     		{ content: "\f674"; !important }
+.play::before   		{ content: "\f04b"; !important }
+.calculate::before     	{ content: "\f1ec"; !important }
+.compare::before     	{ content: "\f362"; !important }
+.history::before     	{ content: "\f1da"; !important }
+.cogs::before     		{ content: "\f085"; !important }
+.backup::before     	{ content: "\f0a0"; !important }
+.euro::before     		{ content: "\f153"; !important }
+.csv::before   			{ content: "\f6dd"; !important }
+.xml::before   			{ content: "\f1c9"; !important }
+.print::before 			{ content: "\f02f"; !important }
+.file::before  			{ content: "\f15b"; !important }
+.monedas::before     	{ content: "\f51e"; !important }
+.notEqual::before     	{ content: "\f53e"; !important }
+.llave::before     		{ content: "\f0ad"; !important }
+.auto::before     		{ content: "\f1b9"; !important }
+.america::before     	{ content: "\f57d"; !important }
+.truncate::before     	{ content: "\f141"; !important }
+.ellipsis::before     	{ content: "\f141"; !important }
+.run::before     		{ content: "\f144"; !important }
+.login::before 			{ content: "\f2f6"; !important }
+.folder::before 		{ content: "\f07c"; !important }
+.freeze::before     	{ content: "\f2dc"; !important }
+.database::before     	{ content: "\f1c0"; !important }
+.newinfomin::before  	{ content: "\f05a"; !important }
+.multiasignacion::before{ content: "\f0ae"; !important }
+.calendar::before		{ content: "\f073"; !important }
+.billeteFilter::before  { content: "\f3d1"; !important }
+
+/* Botones con color inverso */
+.logout::before				{ content: "\f2f5"; color: #FFFFFF; !important }
+.logout:hover:before		{ color: #89e2ff; !important }
+.vw-icon-demo.logout::before{ content: "\f2f5"; color: #00B1EB; !important }
+
+/* Botones con color azul especifico */
+.buttonBlue::before		{ content: "\f111"; color: #00B1EB; !important }
+
+/* Botones con color verde */
+.accept::before				{ content: "\f00c"; color: #51AE30; !important }
+.accept:hover:before		{ color: #005D4D; !important }
+.add::before				{ content: "\f067"; color: #51AE30; !important }
+.add:hover:before			{ color: #005D4D; !important }
+.approve::before      		{ content: "\f164"; color: #51AE30; font-weight: 400; !important }
+.approve:hover:before 		{ color: #005D4D; !important }
+.arrowRight::before 		{ content: "\f061"; color: #51AE30; !important }
+.arrowRight:hover:before 	{ color: #005D4D; !important }
+.arrowLeft::before 			{ content: "\f060"; color: #51AE30; !important }
+.arrowLeft:hover:before 	{ color: #005D4D; !important }
+.autoGreen::before     		{ content: "\f1b9"; color: #51AE30; !important }
+.autoGreen:hover:before 	{ color: #005D4D; !important }
+.buttonGreen::before		{ content: "\f111"; color: #51AE30; !important }
+.dollar::before     		{ content: "\f155"; color: #51AE30; !important }
+.dollar:hover:before  		{ color: #005D4D; !important }
+.excel::before				{ content: "\f1c3"; color: #51AE30; !important }
+.excel:hover:before			{ color: #005D4D; !important }
+.exchange-alt::before		{ content: "\f362"; color: #51AE30; !important }
+.exchange-alt:hover:before	{ color: #005D4D; !important }
+.save::before				{ content: "\f0c7"; color: #51AE30; !important }
+.save:hover:before			{ color: #005D4D; !important }
+.unlock::before     		{ content: "\f09c"; color: #51AE30; !important }
+.unlock:hover:before  		{ color: #005D4D; !important }
+.billeteFilterGreen::before      { content: "\f3d1"; color: #51AE30; !important }
+.billeteFilterGreen:hover:before { color: #005D4D; !important }
+.monedasGreen::before      	{ content: "\f51e"; color: #51AE30; !important }
+.monedasGreen:hover:before 	{ color: #005D4D; !important }
+.notEqualGreen::before      { content: "\f53e"; color: #51AE30; !important }
+.notEqualGreen:hover:before { color: #005D4D; !important }
+.llaveGreen::before      	{ content: "\f0ad"; color: #51AE30; !important }
+.llaveGreen:hover:before 	{ color: #005D4D; !important }
+.americaGreen::before      	{ content: "\f57d"; color: #51AE30; !important }
+.americaGreen:hover:before 	{ color: #005D4D; !important }
+.configsGreen::before      	{ content: "\f201"; color: #51AE30; !important }
+.configsGreen:hover:before 	{ color: #005D4D; !important }
+.approveWithoutError::before	 { content: "\f164"; color: #51AE30; !important }
+.approveWithoutError:hover:before{ color: #005D4D; !important }
+
+/* Botones con color rojo */
+.back::before     		{ content: "\f060"; color: #E4002C; !important }
+.back:hover:before  	{ color: #730019; !important }
+.ban::before			{ content: "\f00d"; color: #E4002C; !important }
+.ban:hover:before		{ color: #C82D20; !important }
+.buttonRed::before		{ content: "\f111"; color: #E4002C; !important }
+.cancel::before			{ content: "\f05e"; color: #E4002C; !important }
+.cancel:hover:before	{ color: #C82D20; !important }
+.check::before   		{ content: "\f46c"; color: #E4002C; !important}
+.error::before			{ content: "\f06a"; color: #E4002C; !important }
+.error:hover:before		{ color: #C82D20; !important }
+.fire::before     		{ content: "\f7e4"; color: #E4002C; !important }
+.fire:hover:before  	{ color: #730019; !important }
+.lock::before     		{ content: "\f023"; color: #E4002C; !important }
+.lock:hover:before  	{ color: #730019; !important }
+.pdf::before   			{ content: "\f1c1"; color: #E4002C; !important }
+.pdf:hover:before 		{ color: #C82D20; !important }
+.reject::before     	{ content: "\f165"; color: #E4002C; font-weight: 400; !important }
+.reject:hover:before 	{ color: #730019; font-weight: 900; animation: bounceneg 1s alternate; !important }
+.spider::before			{ content: "\f717"; color: #E4002C; !important }
+.spider:hover:before	{ color: #C82D20; !important }
+.tools::before     		{ content: "\f7d9"; color: #E4002C; !important }
+.tools:hover:before  	{ color: #730019; !important }
+.approveWithError::before		{ content: "\f164"; color: #E4002C; !important }
+.approveWithError:hover:before	{ color: #730019; !important }
+.deleteButton::before   		{ content: "\f2ed"; color: #E4002C; !important }
+.deleteButton:hover:before   	{ color: #C82D20; !important }
+
+/* Botones con color amarillo */
+.buttonYellow::before		  { content: "\f111"; color: #FFD100; !important }
+.favorites::before     		  { content: "\f005"; color: #FFD100; !important }
+.favorites:hover:before 	  { color: #FAAA00; !important }
+.favorites-empty::before 	  { content: "\f005"; color: #FFD100; font-weight: 400; !important }
+.favorites-empty:hover:before { color: #FAAA00; !important }
+.warn::before				  { content: "\f071"; color: #FFD100; !important }
+.warn:hover:before			  { color: #FAAA00; !important }
+
+/* Botones con color gris */
+.buttonGrey::before		{ content: "\f111"; color: #CFD7D9; !important }
+
+/* Iconos superpuestos */
+.disable::before 	{ content: "\f0ae"; opacity: 0.9; !important }
+.disable::after  	{ content: "\f05e"; color: #C82D20; font-weight: 900; font-family: "Font Awesome 5 Free"; position: relative; left: -1.3em; top: -0.15em;  opacity: 0.4; !important }
+.preview::before 	{ content: "\f15b"; font-weight: 400; !important}
+.preview::after  	{ content: "\f002"; font-weight: 900; font-family: "Font Awesome 5 Free"; position: relative; left: -1.3em; top: -0.15em; !important}
+
+/* Botones del menu de opciones */
+.home::before     	{ content: "\f015"; color: #89e2ff; !important }
+.star::before     	{ content: "\f005"; color: #89e2ff; !important }
+.admin::before     	{ content: "\f1de"; color: #89e2ff; !important }
+.puzzle::before     { content: "\f12e"; color: #89e2ff; !important }
+.billete::before    { content: "\f3d1"; color: #89e2ff; !important }
+.file::before     	{ content: "\f15c"; color: #89e2ff; !important }
+.target::before     { content: "\f140"; color: #89e2ff; !important }
+.chart::before     	{ content: "\f201"; color: #89e2ff; !important }
+.blender::before   	{ content: "\f517"; color: #89e2ff; !important }
+.book::before		{ content: "\f02d"; color: #89e2ff; !important }
+.book::before		{ content: "\f02d"; color: #89e2ff; !important }
+
+
+
+
+
+
+
+/* Por depurar*/
+.searchDollar::before   { content: "\f688"; !important}
+.searchDollar:hover:before  { color: #730019; !important}
+
+
+  
+
+
+
+
+
+/*Estilos que aplican a los elementos definidos como botones de font awesome */
+.icon-panel { border: 0px; text-align:center; margin-top: -4px; margin-left: -8px; margin-right:0px; margin-bottom: -4px; padding: 0px 0px; background-color: transparent; !important; }
+.icon-panel tbody tr.ui-widget-content td.ui-panelgrid-cell.icon-column.gridAlignRight { width: 100%; float:right; background-color: transparent; !important;}
+.ui-panelgrid.ui-widget.panelGridNoBorder.icon-panel.grid100.gridAlignCenter { width: 100%; text-align:center; !important;}
+.panelGridNoBorder.ui-panelgrid > * > tr, .panelGridNoBorder.ui-panelgrid .ui-panelgrid-cell { background-color: transparent; !important }
+.icon-column { border: 0px; text-align:center; margin-top: 0px; margin-left: 0px; margin-right:0px; margin-bottom: 0px; padding: 0px 0px; }
+.ui-panelgrid.ui-widget.panelGridNoBorder.icon-panel { width: 100%; !important }
+
+.icon-label, .icon-labelHeader { text-align:center; margin-top: 0px; margin-bottom: 0px; margin-left: 5px; margin-right:0px; display:block; font-weight: bold; }
+
+ /*css para cambiar iconos de las tablas editables*/
+.ui-datatable .ui-datatable-frozen-container .ui-row-editor 		  {display: flex;flex-direction: row;justify-content: space-between;width: 100%;margin-top: 0;margin-bottom: 0;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-pencil 		  {background: none;text-indent: initial;width: 100%;height: 100%;transform: translate(0, 0);}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-pencil:before {content: "\f044";color: #00B1EB;font-size: 0.75em !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-pencil:hover  {color: #2274AC;animation: bounce 1s alternate !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-check 		  {background: none;text-indent: initial;width: 100%;height: 100%;transform: translate(0, 0);}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-check:before  {content: "\f00c";color: #51AE30;font-size: 0.75em !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-check:hover   {color: #005D4D;text-decoration: none;animation: bounce 1s alternate !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-close 		  {background: none;text-indent: initial;width: 100%;height: 100%;transform: translate(0, 0);}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-close:before  {content: "\f05e";color: #E4002C;font-size: 0.75em !important;}
+.ui-datatable table tbody tr td .ui-row-editor .ui-icon-close:hover   {color: #C82D20;text-decoration: none;animation: bounce 1s alternate !important;}
+
+/*css para el componente de chips*/
+.ui-chips-input-token { width: 100%; }
+.ui-chips-input-token input[type=text] { width: 100%; border: none; background: none; }
+
+.datatable-options { font-size: 6px; padding: 0 5px; }
+.truncate-text-table { min-width: 50%; max-width: 80%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; }
+
+table tr .ui-state-highlight, table tr .ui-widget-content .ui-state-highlight,table tr .ui-widget-header .ui-state-highlight { background: none !important;}
+.ui-state-highlight .ui-icon { background-image: url("/sicam-web/javax.faces.resource/images/ui-icons_333333_256x240.png.jsf?ln=primefaces-bootstrap");}

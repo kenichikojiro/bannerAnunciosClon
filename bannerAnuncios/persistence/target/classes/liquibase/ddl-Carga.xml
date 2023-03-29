@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+        		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        		http://www.liquibase.org/xml/ns/dbchangelog-ext 
+        		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"
+	logicalFilePath="ddl-Carga.xml">
+
+    <changeSet id="10" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE PERMISOS</comment>
+        <loadUpdateData tableName="SEG_PERMISO" primaryKey="PERMISO"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/seguridad/segPermiso/segPermisoBaseApp.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="PERMISO" type="STRING"/>
+            <column name="ESTATUS" type="NUMERIC"/>
+            <column name="MOSTRARENMENU" type="NUMERIC"/>
+            <column name="DESCRIPCION" type="STRING"/>
+            <column name="CLAVE_SISTEMA15" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+    
+    <changeSet id="10.1" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE PERMISOS</comment>
+        <loadUpdateData tableName="SEG_PERMISO" primaryKey="PERMISO"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/seguridad/segPermiso/segPermisoBANNER.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="PERMISO" type="STRING"/>
+            <column name="ESTATUS" type="NUMERIC"/>
+            <column name="MOSTRARENMENU" type="NUMERIC"/>
+            <column name="DESCRIPCION" type="STRING"/>
+            <column name="CLAVE_SISTEMA15" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="20" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE PERFILES</comment>
+        <loadUpdateData tableName="SEG_PERFIL" primaryKey="PERFIL" 
+        				file="liquibase/datos/${bannerLiquibaseEnvironment}/seguridad/segPerfil.sql"
+                        separator="^" encoding="UTF-8">
+            <column name="PERFIL" type="STRING"/>
+            <column name="ESTATUS" type="NUMERIC"/>
+            <column name="DESCRIPCION" type="STRING"/>
+            <column name="ID_PERFIL_PADRE" type="NUMERIC"/>
+            <column name="FECHA_ACTUALIZACION" type="TIMESTAMP"/>
+            <column name="USR_ACTUALIZA" type="STRING"/>
+            <column name="ES_PERFIL_MAESTRO" type="NUMERIC"/>
+            <column name="FECHA_CREACION" type="TIMESTAMP"/>
+            <column name="USR_CREACION" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+    
+    <changeSet id="30" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE PERMISOS POR PERFILES</comment>
+        <loadUpdateData tableName="SEG_PERMISO_PERFIL" primaryKey="IDPERFIL,IDPERMISO"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/seguridad/segPermisoPerfil/segPermiso_AdmAMS.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="IDPERFIL" type="NUMERIC"/>
+            <column name="IDPERMISO" type="NUMERIC"/>
+        </loadUpdateData>
+    </changeSet>
+	
+	    <changeSet id="40" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE PERMISOS POR PERFILES</comment>
+        <loadUpdateData tableName="SEG_PERMISO_PERFIL" primaryKey="IDPERFIL,IDPERMISO"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/seguridad/segPermisoPerfil/segPermiso_AdmSist.sql"
+                        separator="^" encoding="UTF-8">
+            <column name="IDPERFIL" type="NUMERIC"/>
+            <column name="IDPERMISO" type="NUMERIC"/>
+        </loadUpdateData>
+    </changeSet>
+	
+	<changeSet id="50" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE PERMISOS POR PERFILES</comment>
+        <loadUpdateData tableName="SEG_PERMISO_PERFIL" primaryKey="IDPERFIL,IDPERMISO"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/seguridad/segPermisoPerfil/segPermiso_AdmUM.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="IDPERFIL" type="NUMERIC"/>
+            <column name="IDPERMISO" type="NUMERIC"/>
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="60" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE USUARIOS</comment>
+        <loadUpdateData tableName="SEG_USUARIO" primaryKey="ID,USER_ID" 
+        				file="liquibase/datos/${bannerLiquibaseEnvironment}/seguridad/segUsuario.sql"
+                        separator="^" encoding="UTF-8">
+            <column name="ID" type="NUMERIC"/>
+            <column name="USER_ID" type="STRING"/>
+            <column name="NOMBREUSUARIO" type="STRING"/>
+            <column name="APPATERNO" type="STRING"/>
+            <column name="APMATERNO" type="STRING"/>
+            <column name="CORREOE" type="STRING"/>
+            <column name="ESTATUS" type="NUMERIC"/>
+            <column name="FECHA_CREACION" type="TIMESTAMP"/>
+            <column name="USR_CREACION" type="STRING"/>
+            <column name="FECHA_ACTUALIZACION" type="TIMESTAMP"/>
+            <column name="USR_ACTUALIZA" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="70" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS PARA SEG_PERFIL_USR</comment>
+        <loadUpdateData tableName="SEG_PERFIL_USR" primaryKey="IDUSUARIO,IDPERFIL" 
+        				file="liquibase/datos/${bannerLiquibaseEnvironment}/seguridad/segPerfilUsr.sql" 
+        				separator="^" encoding="UTF-8">
+            <column name="IDUSUARIO" type="NUMERIC" />
+            <column name="IDPERFIL" type="NUMERIC" />
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="80" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE FWK IDIOMA</comment>
+        <loadUpdateData tableName="FWK_IDIOMA" primaryKey="COD_IDIOMA,COD_PAIS"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/framework/fwkIdioma.sql" separator="^" encoding="UTF-8">
+            <column name="DESCRIPCION" type="STRING"/>
+            <column name="COD_IDIOMA" type="STRING"/>
+            <column name="COD_PAIS" type="STRING"/>
+            <column name="ESTATUS" type="NUMERIC"/>
+            <column name="PREDETERMINADO" type="NUMERIC"/>
+            <column name="FORMATO_FECHA" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="90.0" author="banner" runOnChange="true">
+        <!-- SELECT cadena.CLAVE + '=' + cadena.VALOR FROM FWK_CADENA_IDIOMA cadena
+            WHERE ID_IDIOMA = (SELECT ID FROM FWK_IDIOMA where COD_IDIOMA = 'es' and
+            COD_PAIS = 'MX'); -->
+        <loadUpdateData tableName="FWK_CADENA_IDIOMA"
+                        primaryKey="CLAVE,ID_IDIOMA" file="liquibase/cadenas/es_MX.sql"
+                        separator="^" encoding="UTF-8">
+            <column name="CLAVE" type="STRING" />
+            <column name="VALOR" type="STRING" />
+            <column name="ID_IDIOMA" type="NUMERIC" />
+        </loadUpdateData>
+    </changeSet>
+	
+    <changeSet id="90.1" author="banner" runOnChange="true">
+
+        <loadUpdateData tableName="FWK_CADENA_IDIOMA"
+                        primaryKey="CLAVE,ID_IDIOMA" file="liquibase/cadenas/es_MX_general.sql"
+                        separator="^" encoding="UTF-8">
+            <column name="CLAVE" type="STRING" />
+            <column name="VALOR" type="STRING" />
+            <column name="ID_IDIOMA" type="NUMERIC" />
+        </loadUpdateData>
+    </changeSet>
+	
+    <changeSet id="90.2" author="banner" runOnChange="true">
+        <loadUpdateData tableName="FWK_CADENA_IDIOMA"
+                        primaryKey="CLAVE,ID_IDIOMA" file="liquibase/cadenas/es_MX_menu.sql"
+                        separator="^" encoding="UTF-8">
+            <column name="CLAVE" type="STRING" />
+            <column name="VALOR" type="STRING" />
+            <column name="ID_IDIOMA" type="NUMERIC" />
+        </loadUpdateData>
+    </changeSet>
+	
+	<changeSet id="90.3" author="banner" runOnChange="true">
+        <loadUpdateData tableName="FWK_CADENA_IDIOMA"
+                        primaryKey="CLAVE,ID_IDIOMA" file="liquibase/cadenas/es_MX_aprobacion.sql"
+                        separator="^" encoding="UTF-8">
+            <column name="CLAVE" type="STRING" />
+            <column name="VALOR" type="STRING" />
+            <column name="ID_IDIOMA" type="NUMERIC" />
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="100" author="banner" runOnChange="true">
+        <comment>SE AGREGAN DATOS DE FWK CAT APPS</comment>
+        <loadUpdateData tableName="FWK_CAT_APPS" primaryKey="ID_APP"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/framework/fwkCatApps.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="ID_APP" type="NUMERIC"/>
+            <column name="APPLICATION_NAME" type="STRING"/>
+            <column name="CREATED_ON" type="SKIP"/>
+            <column name="CREATED_BY" type="SKIP"/>
+            <column name="UPDATED_ON" type="SKIP"/>
+            <column name="UPDATED_BY" type="SKIP"/>
+            <column name="STATUS" type="NUMERIC"/>
+        </loadUpdateData>
+    </changeSet>
+
+    <changeSet id="110" author="banner" runOnChange="true">
+        <comment>SE AGREGAN GRUPOS DE CAT_CONTENT</comment>
+        <loadUpdateData tableName="FWK_CAT_ADMIN" primaryKey="ID_APP,DESCRIPTION"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/framework/fwkCatAdmin.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="ID_APP" type="NUMERIC"/>
+            <column name="DESCRIPTION" type="STRING"/>
+            <column name="CREATED_ON" type="SKIP"/>
+            <column name="CREATED_BY" type="SKIP"/>
+            <column name="UPDATED_ON" type="SKIP"/>
+            <column name="UPDATED_BY" type="SKIP"/>
+            <column name="STATUS" type="NUMERIC"/>
+        </loadUpdateData>
+    </changeSet>
+    
+    <changeSet id="120" author="banner" runOnChange="true">
+        <comment>SE AGREGAN VALORES CAT_CONTENT</comment>
+        <loadUpdateData tableName="FWK_CAT_CONTENT" primaryKey="ID_ADMIN,KEY_VALUE"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/framework/fwkCatContent.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="ID_APP" type="NUMERIC"/>
+            <column name="ID_ADMIN" type="NUMERIC"/>
+            <column name="KEY_VALUE" type="STRING"/>
+            <column name="VALUE" type="STRING"/>
+            <column name="DESCRIPTION" type="STRING"/>
+            <column name="CREATED_ON" type="TIMESTAMP"/>
+            <column name="CREATED_BY" type="STRING"/>
+            <column name="UPDATED_ON" type="SKIP"/>
+            <column name="UPDATED_BY" type="SKIP"/>
+            <column name="STATUS" type="NUMERIC"/>
+        </loadUpdateData>
+    </changeSet>
+    
+    <changeSet id="130" author="banner" runOnChange="true">
+        <comment>SE AGREGAN ITEMS DE MENU</comment>
+        <delete tableName="FWK_ACTION_ITEM" />
+        <loadUpdateData tableName="FWK_ACTION_ITEM" primaryKey="LABEL"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/framework/fwkActionItem.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="ENABLED" type="NUMERIC"/>
+            <column name="ORDERHINT" type="NUMERIC"/>
+            <column name="PARENT_ID" type="NUMERIC"/>
+            <column name="ICONURL" type="STRING"/>
+            <column name="LABEL" type="STRING"/>
+            <column name="URL" type="STRING"/>
+            <column name="ID_PERMISO" type="NUMERIC"/>
+            <column name="ID" type="NUMERIC" />
+        </loadUpdateData>
+    </changeSet>
+    
+    <changeSet id="140" author="banner" runOnChange="true">
+        <comment>SE AGREGAN EL CATALOGO DE PANTALLAS</comment>
+        <loadUpdateData tableName="FWK_CATALOGO_PANTALLAS" primaryKey="NOMBRE_A_MOSTRAR"
+                        file="liquibase/datos/${bannerLiquibaseEnvironment}/framework/fwkCatalogoPantallas.sql" 
+                        separator="^" encoding="UTF-8">
+            <column name="NOMBRE_A_MOSTRAR" type="STRING"/>
+            <column name="ESTATUS" type="NUMERIC"/>
+            <column name="FECHA_CREACION" type="TIMESTAMP"/>
+            <column name="USR_CREACION" type="STRING"/>
+            <column name="FECHA_ACTUALIZACION" type="TIMESTAMP"/>
+            <column name="USR_ACTUALIZA" type="STRING"/>
+            <column name="RUTA_PANTALLA" type="STRING"/>
+            <column name="NOMBRE_PANTALLA" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+</databaseChangeLog>
